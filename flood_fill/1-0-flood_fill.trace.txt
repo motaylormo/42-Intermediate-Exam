@@ -1,0 +1,66 @@
+= flood_fill ===================================================================
+$> gcc -Wextra -Wall -Werror flood_fill.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./cw2j1rzbg841ndrmvwpv96ex test1
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./tx686t7o9ub3fuy5es4x1j3w test2
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./ekxh1156e5ymocygsjcsgk1s test3
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./05342zozrf7ttlxj9yuisjj7 test4
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./3ak3tedcz7ennukh4vm7q13z test5
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./55y8xfomzy8fv5v4itf13rvr test6
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./nneo0djat5gb3vfp2vw1mq8w test7
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./7vvdw9l0l6fufvhnl2011m96 test8
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./x7irl2hkrt85zz94ayk6gz7o test9
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./ss265ojcpcluop94ke1d5t5k test10
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./ri673le8cakt8e2wikqqpacj test11
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./2squxchr2g98zicuulyedzli test12
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
