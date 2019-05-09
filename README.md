@@ -1,2 +1,2 @@
 # 42-Intermediate-Exam
-Moulinette-passing verions of Intermediate Exam questions. Subject + code + trace.
+Moulinette-passing versions of Intermediate Exam questions. Subject + code + trace.
