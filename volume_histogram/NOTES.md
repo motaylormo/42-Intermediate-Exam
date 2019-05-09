@@ -1,5 +1,5 @@
 # Subject tests
-### Test 1
+## Test 1
 ```
 int histogram[] = {1, 0, 2, 0, 2};
 int size = 5;
@@ -12,7 +12,7 @@ correct return = 3
 1 0 2 0 2
 ```
 
-### Test 2
+## Test 2
 ```
 int histogram[] = {0, 0, 4, 0, 0, 6, 0, 0, 3, 0, 5, 0, 1, 0, 0, 0};
 int size = 16;
@@ -29,8 +29,8 @@ correct return = 26
 0 0 4 0 0 6 0 0 3 0 5 0 1 0 0 0
 ```
 
-#Trace tests
-### Test 1
+# Trace tests
+## Test 1
 ```
 int histogram[] = {0};
 int size = 1;
@@ -42,11 +42,11 @@ correct return = 0
 0
 ```
 
-### Test 2
+## Test 2
 ```
 int histogram[] = {1};
 int size = 1;
-``
+```
 correct return = 0
 ```
 #
@@ -54,7 +54,7 @@ correct return = 0
 1
 ```
 
-### Test 3
+## Test 3
 ```
 int histogram[] = {1, 0, 1};
 int size = 3;
@@ -66,7 +66,7 @@ correct return = 1
 1 0 1
 ```
 
-### Test 4
+## Test 4
 ```
 int histogram[] = {0, 1, 0};
 int size = 3;
@@ -78,7 +78,7 @@ correct return = 0
 0 1 0
 ```
 
-### Test 5
+## Test 5
 ```
 int histogram[] = {0, 1, 0, 5, 0, 0, 3, 3, 3, 0, 0, 1, 0, 0, 2, 2, 0, 1};
 int size = 18;
@@ -94,7 +94,7 @@ correct return = 17
 0 1 0 5 0 0 3 3 3 0 0 1 0 0 2 2 0 1
 ```
 
-### Test 6
+## Test 6
 ```
 int histogram[] = {0, 10, 0, 0, 0, 5, 0, 0, 0, 6, 0, 0, 8, 0, 0,
                    0,  0, 9, 0, 0, 0, 2, 0, 0, 0, 7, 0, 0, 0, 6,
@@ -120,7 +120,7 @@ correct return = 343
   10
 ```
 
-### Test 7
+## Test 7
 ```
 int histogram[] = {2, 0, 0, 5, 6, 6, 5, 0, 0, 8, 9, 0, 5, 0, 0,
                    4, 0, 7, 0, 8, 0, 9, 0, 3, 0, 1, 0, 5, 0, 5,
