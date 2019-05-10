@@ -1,7 +1,7 @@
 # Subject tests
 ## Test 1
 ```
-int	mine[][] = {
+int mine[][] = {
 	{ 1, 0, 0 },
 	{ 0, 3, 4 },
 	{ 0, 0, 0 },
@@ -20,7 +20,7 @@ Max possible gold for each point
 
 ## Test 2
 ```
-int	mine[][] = {
+int mine[][] = {
 	{ 1, 2, 3 },
 	{ 3, 4, 8 },
 	{ 9, 6, 7 },
@@ -39,7 +39,7 @@ Max possible gold for each point
 
 ## Test 3
 ```
-int	mine[][] = {
+int mine[][] = {
 	{ 1, 3, 1, 5 },
 	{ 2, 2, 4, 1 },
 	{ 5, 0, 2, 3 },
