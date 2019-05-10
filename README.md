@@ -20,12 +20,15 @@ Moulinette-passing versions of Intermediate Exam questions. Subject + code + tra
 * [`reverse_tree`](./reverse_tree)
 * `str_maxlenoc`
 ### Level 03
-* `convert_bst`
+* [`convert_bst`](./convert_bst)
 * [`gold_gain`](./gold_gain)
 * `perimeter`
 * [`width_tree`](./width_tree)
 ### Level 04
 * `clone_list`
 * `intersection`
+* [`longest_subarray`](./longest_subarray)
 * `range_comb`
 * `volume_histogram`
+### Level 05
+* `g_diam`
