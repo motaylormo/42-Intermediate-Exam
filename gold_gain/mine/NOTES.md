@@ -10,7 +10,7 @@ int n = 3;
 ```
 correct return = 8
 ```
-Max possible gold for each point
+Max possible gold for each point. From the left column, 8 is max.
 {
 	{ 8, 4, 0 },
 	{ 7, 7, 4 },
@@ -29,7 +29,7 @@ int n = 3;
 ```
 correct return = 23
 ```
-Max possible gold for each point
+Max possible gold for each point. From the left column, 23 is max.
 {
 	{ 13, 10, 3 },
 	{ 17, 12, 8 },
@@ -49,7 +49,7 @@ int n = 4;
 ```
 correct return = 16
 ```
-Max possible gold for each point
+Max possible gold for each point.  From the left column, 16 is max.
 {
 	{ 13, 12, 6, 5 },
 	{ 14, 11, 9, 1 },
