@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   flood_fill.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/23 10:01:06 by exam              #+#    #+#             */
-/*   Updated: 2019/04/23 10:01:07 by exam             ###   ########.fr       */
+/*   Created: 2019/05/12 13:42:41 by mtaylor           #+#    #+#             */
+/*   Updated: 2019/05/12 13:42:42 by mtaylor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "t_point.h"
 
-#define	UPPER_BOUND(p, size)	((p.x < size.x) && (p.y < size.y))
-#define	LOWER_BOUND(p)			((p.x >= 0) && (p.y >= 0))
-#define	POINT_EXISTS(p, size)	(UPPER_BOUND(p, size) && LOWER_BOUND(p))
+#define	IN_BOUNDS(x, n) ((x >= 0) && (x < n))
+#define	POINT_EXISTS(p, size) (IN_BOUNDS(p.x, size.x) && IN_BOUNDS(p.y, size.y))
 
 static void	ff_recurse(char **tab, t_point size, char match, t_point p)
 {

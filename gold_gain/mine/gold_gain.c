@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gold_gain.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/07 10:22:48 by exam              #+#    #+#             */
-/*   Updated: 2019/05/07 10:22:49 by exam             ###   ########.fr       */
+/*   Created: 2019/05/12 13:50:57 by mtaylor           #+#    #+#             */
+/*   Updated: 2019/05/12 13:50:58 by mtaylor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 #define IN_BOUNDS(x, n)			(x >= 0 && x < n)
 #define POINT_EXIST(x, y, n)	(IN_BOUNDS(x, n) && IN_BOUNDS(y, n))
 #define UNTOUCHED (-1)
-#define LAST (n - 1)
 
-#define R_ACROSS	row + 1, col		//straight to the right
-#define R_UP		row + 1, col - 1	//diagonally up to the right
-#define R_DOWN		row + 1, col + 1	//diagonally down to the right
+#define R_ACROSS	x + 1, y		//straight to the right
+#define R_UP		x + 1, y - 1	//diagonally up to the right
+#define R_DOWN		x + 1, y + 1	//diagonally down to the right
 
 static int	**create_arr(int n, int **mine)
 {
@@ -31,20 +30,13 @@ static int	**create_arr(int n, int **mine)
 		arr[i] = malloc(sizeof(int) * n);
 		for (int j = 0; j < n; ++j)
 		{
-			if (j == LAST)
+			if (j == n - 1)
 				arr[i][j] = mine[i][j];
 			else
 				arr[i][j] = UNTOUCHED;
 		}
 	}
 	return (arr);
-}
-
-static int	check_point(int **arr, int n, int row, int col)
-{
-	if (!POINT_EXIST(row, col, n))
-		return (0);
-	return (arr[col][row]);
 }
 
 static int	max_of_3(int a, int b, int c)
@@ -57,20 +49,28 @@ static int	max_of_3(int a, int b, int c)
 		return (c);
 }
 
-static void	gg_recurse(int **mine, int n, int **log, int row, int col)
+static int	check_point(int **arr, int n, int x, int y)
 {
-	if (!POINT_EXIST(row, col, n) || (log[col][row] != UNTOUCHED))
-		return ;
-	gg_recurse(mine, n, log, R_ACROSS);
-	gg_recurse(mine, n, log, R_UP);
-	gg_recurse(mine, n, log, R_DOWN);
-	log[col][row] = mine[col][row] + max_of_3(check_point(log, n, R_ACROSS),
-											  check_point(log, n, R_UP),
-											  check_point(log, n, R_DOWN));
+	if (!POINT_EXIST(x, y, n))
+		return (0);
+	return (arr[y][x]);
+}
+
+static void	gg_recurse(int **mine, int n, int **log, int x, int y)
+{
+	if (POINT_EXIST(x, y, n) && (log[y][x] == UNTOUCHED))
+	{
+		gg_recurse(mine, n, log, R_ACROSS);
+		gg_recurse(mine, n, log, R_UP);
+		gg_recurse(mine, n, log, R_DOWN);
+		log[y][x] = mine[y][x] + max_of_3(check_point(log, n, R_ACROSS),
+										check_point(log, n, R_UP),
+										check_point(log, n, R_DOWN));
+	}
 }
 
 /*
-**	Initially the miner is at first column but can be at any row.
+**	"Initially the miner is at first column but can be at any row."
 */
 int		gold_gain(int **mine, int n)
 {
@@ -83,10 +83,10 @@ int		gold_gain(int **mine, int n)
 		gg_recurse(mine, n, log, 0, i);
 	}
 	max = 0;
-	for (int i = 0; i < n; ++i)
+	for (int y = 0; y < n; ++y)
 	{
-		if (log[i][0] > max)
-			max = log[i][0];
+		if (log[y][0] > max)
+			max = log[y][0];
 	}
 	return (max);
 }
