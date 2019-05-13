@@ -25,10 +25,13 @@ Moulinette-passing versions of Intermediate Exam questions. Subject + code + tra
 * `perimeter`
 * [`width_tree`](./width_tree)
 ### Level 04
-* `clone_list`
+* [`clone_list`](./clone_list)
 * `intersection`
 * [`longest_subarray`](./longest_subarray)
 * `range_comb`
 * `volume_histogram`
 ### Level 05
+* `count_island`
 * `g_diam`
+* `infin_add`
+* `infin_mult`
