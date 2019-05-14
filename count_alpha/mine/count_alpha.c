@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #define IS_ALPHA(c)	((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+#define USED -1
 
 static int	to_lower(char c)
 {
@@ -21,30 +22,32 @@ static int	to_lower(char c)
 		return (c);
 }
 
-static void	count_ascii(char *s, int *index)
+static void	count_ascii(char *s, int *hashtable)
 {
 	while (*s)
 	{
-		index[to_lower(*s)]++;
+		hashtable[to_lower(*s)]++;
 		s++;
 	}
 }
 
 void	count_alpha(char *s)
 {
-	int	index[127] = {0};
-	int	tally = 0;
+	int	hashtable[127] = {0};
+	int	first = 0;
 
-	count_ascii(s, (int*)&index);
+	count_ascii(s, (int*)&hashtable);
 
 	while (*s)
 	{
-		if (IS_ALPHA(*s) && index[to_lower(*s)] != -1)
+		*s = to_lower(*s);
+		if (IS_ALPHA(*s) && hashtable[(int)*s] != USED)
 		{
-			printf((tally == 0) ? "%d%c" : ", %d%c",
-				index[to_lower(*s)], to_lower(*s));
-			index[to_lower(*s)] = -1;
-			tally++;
+			if (first != 0)
+				printf(", ");
+			first = 1;
+			printf("%d%c", hashtable[(int)*s], *s);
+			hashtable[(int)*s] = USED;
 		}
 		s++;
 	}
