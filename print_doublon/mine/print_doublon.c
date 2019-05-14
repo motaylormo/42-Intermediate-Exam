@@ -14,7 +14,7 @@
 
 void	print_doublon(int *a, int a_len, int *b, int b_len)
 {
-	int	tally = 0;
+	int	first = 0;
 	int	ai = 0;
 	int	bi = 0;
 
@@ -26,8 +26,8 @@ void	print_doublon(int *a, int a_len, int *b, int b_len)
 			bi++;
 		if (a[ai] == b[bi])
 		{
-			printf(((tally == 0) ? "%d" : " %d"), a[ai]);
-			tally++;
+			printf(((first == 0) ? "%d" : " %d"), a[ai]);
+			first = 1;
 			ai++;
 			bi++;
 		}
