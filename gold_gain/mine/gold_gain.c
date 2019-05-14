@@ -28,25 +28,21 @@ static int	**create_arr(int n, int **mine)
 	for (int i = 0; i < n; ++i)
 	{
 		arr[i] = malloc(sizeof(int) * n);
-		for (int j = 0; j < n; ++j)
+		for (int j = 0; j < n - 1; ++j)
 		{
-			if (j == n - 1)
-				arr[i][j] = mine[i][j];
-			else
-				arr[i][j] = UNTOUCHED;
+			arr[i][j] = UNTOUCHED;
 		}
+		arr[i][n - 1] = mine[i][n - 1];
 	}
 	return (arr);
 }
 
 static int	max_of_3(int a, int b, int c)
 {
-	if (a > b && a > c)
-		return (a);
-	else if (b > c)
-		return (b);
+	if (a > b)
+		return ((a > c) ? a : c);
 	else
-		return (c);
+		return ((b > c) ? b : c);
 }
 
 static int	check_point(int **arr, int n, int x, int y)
