@@ -28,10 +28,10 @@ int		is_looping(struct s_node *node)
 
 	while (slow && fast)
 	{
+		if (!fast->next)
+			break;
 		slow = slow->next;
-		fast = fast->next;
-		if (fast)
-			fast = fast->next;
+		fast = fast->next->next;
 		if (slow == fast)
 			return (1);
 	}
