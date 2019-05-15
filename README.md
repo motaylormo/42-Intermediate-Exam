@@ -22,14 +22,14 @@ Moulinette-passing versions of Intermediate Exam questions. Subject + code + tra
 ### Level 03
 * [`convert_bst`](./convert_bst/mine)
 * [`gold_gain`](./gold_gain/mine)
-* `perimeter`
+* [`perimeter`](./perimeter/mine)
 * [`width_tree`](./width_tree/mine)
 ### Level 04
 * [`clone_list`](./clone_list/mine)
 * `intersection`
 * [`longest_subarray`](./longest_subarray/mine)
 * `range_comb`
-* `volume_histogram`
+* [`volume_histogram`](./volume_histogram/mine)
 ### Level 05
 * `count_island`
 * `g_diam`

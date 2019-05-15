@@ -1,0 +1,106 @@
+= perimeter ====================================================================
+$> gcc -Wextra -Wall -Werror main.c perimeter.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./hwi6a1ua7smb0bs6qxyff7ec 0
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./8gi1u18rj3vhz94m2qhb5w86 1
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./b1e476in027n5uj8b4a41fza 2
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./4nol80gx3nry5fy4kf6t9z2v 106
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./41i5txyny8h61y0y8gygby87 4
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./uersdcik6zlv4636shd6876q 5
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./julz4c1tyg56vca2yqtryx7a 6
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./9ugt6iwlbx2hxaa5dzpq11pi 7
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./ysbzh0of0hrkcs1ut3wu7zwm 107
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./e7000egopizi8vzby6vnse0s 9
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./3vgj9style9wsgh5u8aueenn 208
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./hwhu2v63e1vlfz9abz2n7kfb 421421
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./heixbbqc6fakf0fjui3x19vj 12
+$> diff -U 3 user_output_test13 test13.output | cat -e
+
+Diff OK :D
+= Test 14 ==================================================
+$> ./cyx71gsjlbpab5q1nfrqokwe 13
+$> diff -U 3 user_output_test14 test14.output | cat -e
+
+Diff OK :D
+= Test 15 ==================================================
+$> ./0mhfnk33u1zsr95frgqx7bkn 14
+$> diff -U 3 user_output_test15 test15.output | cat -e
+
+Diff OK :D
+= Test 16 ==================================================
+$> ./vwa51d45y0mkbul3i6qzrpcg 15
+$> diff -U 3 user_output_test16 test16.output | cat -e
+
+Diff OK :D
+= Test 17 ==================================================
+$> ./zmrtg4i1mckipza3cy7qbcaz 1001
+$> diff -U 3 user_output_test17 test17.output | cat -e
+
+Diff OK :D
+= Test 18 ==================================================
+$> ./dujen29y15o5z8atb7b6b8ip 17
+$> diff -U 3 user_output_test18 test18.output | cat -e
+
+Diff OK :D
+= Test 19 ==================================================
+$> ./96rqux4lwloewaeelprn6wd1 47
+$> diff -U 3 user_output_test19 test19.output | cat -e
+
+Diff OK :D
+= Test 20 ==================================================
+$> ./cposce91lvxpr4339s7w7jvg 116
+$> diff -U 3 user_output_test20 test20.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
