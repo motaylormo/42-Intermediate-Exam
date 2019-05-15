@@ -17,29 +17,30 @@ struct s_node
 	struct s_node	*right;
 };
 
-static void	send_snake_down(struct s_node *node, int path, int *ptr)
+/*
+**	"nodes with consecutive values in increasing order."
+*/
+#define CONSEC(a, b)	(a + 1 == b)
+
+static void	send_snake_down(struct s_node *node, int *max, int path)
 {
-	if (path > *ptr)
-		*ptr = path;
+	if (path > *max)
+		*max = path;
 	if (node->left)
 	{
-		if (node->left->value == node->value + 1)
-			send_snake_down(node->left, path + 1, ptr);
-		else
-			send_snake_down(node->left, 1, ptr);
+		send_snake_down(node->left, max,
+				(CONSEC(node->value, node->left->value)) ? path + 1 : 1);
 	}
 	if (node->right)
 	{
-		if (node->right->value == node->value + 1)
-			send_snake_down(node->right, path + 1, ptr);
-		else
-			send_snake_down(node->right, 1, ptr);
+		send_snake_down(node->right, max,
+				(CONSEC(node->value, node->right->value)) ? path + 1 : 1);
 	}
 }
 
 int		longest_sequence(struct s_node *node)
 {
-	int	ptr = 0;
-	send_snake_down(node, 1, &ptr);
-	return (ptr);
+	int	max = 0;
+	send_snake_down(node, &max, 1);
+	return (max);
 }
