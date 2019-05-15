@@ -16,7 +16,8 @@ struct s_node {
 };
 
 /*
-**	Returns 1 if the linked list is looping, otherwise 0.
+**	1 = looping
+**	0 = not looping
 */
 int		is_looping(struct s_node *node)
 {
