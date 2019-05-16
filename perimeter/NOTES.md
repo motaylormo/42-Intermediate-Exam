@@ -6,6 +6,7 @@
 
 The only "trick" to `perimeter` is avoiding double inclusion. For example, a node at the end of the chain of node->left which is also a leaf node. Or a root node which is also a leaf node.
 
+# Example
 Here is the tree from the subject, for whom the output is: ```92 85 79 96 58 58 41 22 35 31 55 99 51 85 78 64 26```
 
 I've marked it up:
