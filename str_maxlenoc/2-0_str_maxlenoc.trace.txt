@@ -1,0 +1,85 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r6p8.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Sun May 19 11:10:24 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 10.0.0 (clang-1000.10.44.4)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-intermediate/practice-exam_20190519/mtaylor
+
+= Git history ==================================================================
+$> git -C /var/folders/sv/zq2qlsyx68b57f7rjksk07lr0000gp/T/tmpDNsD75/user log --pretty='%H - %an, %ad : %s'
+749d28840f01e6796c262dd1e9a0edd8573672f9 - Molly Taylor, Sun May 19 11:10:16 2019 -0700 : str_maxlenoc
+76a973a69b9580ee09cfe5f488097939d80a3675 - Molly Taylor, Sun May 19 11:07:21 2019 -0700 : height_tree
+8dedab5d7246d5798350e6e624f3de2188638195 - Molly Taylor, Sun May 19 10:28:51 2019 -0700 : flood fill
+7b02287d49b54fa02a0709d4958a96d8481d3fb7 - Molly Taylor, Sun May 19 10:26:26 2019 -0700 : equation
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/sv/zq2qlsyx68b57f7rjksk07lr0000gp/T/tmpDNsD75/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1014 May 19 11:10 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 May 19 11:10 equation
+drwxr-xr-x  3 deepthought  deepthought   102 May 19 11:10 flood_fill
+drwxr-xr-x  3 deepthought  deepthought   102 May 19 11:10 height_tree
+drwxr-xr-x  3 deepthought  deepthought   102 May 19 11:10 str_maxlenoc
+
+/var/folders/sv/zq2qlsyx68b57f7rjksk07lr0000gp/T/tmpDNsD75/user/equation:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1335 May 19 11:10 equation.c
+
+/var/folders/sv/zq2qlsyx68b57f7rjksk07lr0000gp/T/tmpDNsD75/user/flood_fill:
+total 8
+-rw-r--r--  1 deepthought  deepthought  18 May 19 11:10 flood_fill.c
+
+/var/folders/sv/zq2qlsyx68b57f7rjksk07lr0000gp/T/tmpDNsD75/user/height_tree:
+total 8
+-rw-r--r--  1 deepthought  deepthought  1538 May 19 11:10 height_tree.c
+
+/var/folders/sv/zq2qlsyx68b57f7rjksk07lr0000gp/T/tmpDNsD75/user/str_maxlenoc:
+total 8
+-rw-r--r--  1 deepthought  deepthought  2329 May 19 11:10 str_maxlenoc.c
+ 
+= str_maxlenoc =================================================================
+$> gcc -Wextra -Wall -Werror str_maxlenoc.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./2i7iksgipevurwvwhbndjc50 "Bonjour"
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./dpyqwqldc5t5oolalts6u5qb "bonjouran" "bonjouran" "confiseriean" "bonne annee"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./g36ajxc21ectx7xgy4s8l2c8 "bonjour an" "bonjour an" "confiserie an" "bonne annee"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./c19zeoyihvx7yer22awehlv2 "voila" "voila" "ouais ben voila"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./1wgeyigy3srqj0f5rw2wfjia "bosdsdfnjodur" "atehhellosd" "afkuonjosurafg" "headfgllosf" "fghellosag afdfbosnjourafg"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-#define	BOTTOM(n)	(!n->left && !n->right)
+#define	LEAF(n)	(!n->left && !n->right)
 
 struct s_node {
 	int				value;
@@ -20,23 +20,23 @@ struct s_node {
 	struct s_node	*left;
 };
 
-static void	bottom_nodes(struct s_node *n)
+static void	leaf_nodes(struct s_node *n)
 {
 	if (n)
 	{
-		if (BOTTOM(n))
+		if (LEAF(n))
 			printf(" %d", n->value);
 		else
 		{
-			bottom_nodes(n->left);
-			bottom_nodes(n->right);
+			leaf_nodes(n->left);
+			leaf_nodes(n->right);
 		}
 	}
 }
 
 static void	leftmost_nodes(struct s_node *n)
 {
-	if (n && !BOTTOM(n))
+	if (n && !LEAF(n))
 	{
 		printf(" %d", n->value);
 		leftmost_nodes(n->left);
@@ -45,7 +45,7 @@ static void	leftmost_nodes(struct s_node *n)
 
 static void	rightmost_nodes(struct s_node *n)
 {
-	if (n && !BOTTOM(n))
+	if (n && !LEAF(n))
 	{
 		rightmost_nodes(n->right);
 		printf(" %d", n->value);
@@ -53,20 +53,20 @@ static void	rightmost_nodes(struct s_node *n)
 }
 
 /*
-**	leftmost() & rightmost() can't be bottom nodes,
-**								and are not run on the root.
+**	leftmost() & rightmost() can't be leaf nodes,
+**		and are not run on the root.
 **	But I DO need to protect against double-printing
-**								a root that is also a bottom node.
+**		root that is also a leaf node.
 */
 void	perimeter(struct s_node *root)
 {
 	if (!root)
 		return;
 	printf("%d", root->value);
-	if (!BOTTOM(root))
+	if (!LEAF(root))
 	{
 		leftmost_nodes(root->left);
-		bottom_nodes(root);
+		leaf_nodes(root);
 		rightmost_nodes(root->right);
 	}
 	printf("\n");

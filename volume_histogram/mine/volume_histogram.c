@@ -14,44 +14,42 @@
 
 /*
 **	Find the next levee that is >= the first levee
+**		of (if there are no >= levees left) the biggest levee left
 */
-static int	next_bigger(int *histogram, int size, int i)
+static int	next_levee(int *arr, int size, int i)
 {
-	int	levee1 = histogram[i];
-	int	tmp_i = -1;
-	int	tmp_size = 0;
+	int	levee1 = arr[i];
+	int	backup;
 
+	backup = i + 1;
 	while (++i < size)
 	{
-		if (histogram[i] >= levee1)
+		if (arr[i] >= levee1)
 			return (i);
-		if (histogram[i] > tmp_size)
-		{
-			tmp_size = histogram[i];
-			tmp_i = i;
-		}
+		if (arr[i] > arr[backup])
+			backup = i;
 	}
-	return (tmp_i);
+	return ((backup < size) ? backup : size);
 }
 
 /*
 **	Find the volumn between the two levees
-**		then remove any smaller walls inside that (displacement)
+**		then remove any smaller walls inside (displaced water)
 */
-static int	get_block(int *histogram, int start, int end)
+static int	get_block(int *arr, int levee1, int levee2)
 {
 	int	vol;
 
-	vol = SMALLER(histogram[start], histogram[end]) * (end - start - 1);
+	vol = SMALLER(arr[levee1], arr[levee2]) * (levee2 - levee1 - 1);
 
-	for (int i = start + 1; i < end; ++i)
+	for (int i = levee1 + 1; i < levee2; ++i)
 	{
-		vol -= histogram[i];//displacement
+		vol -= arr[i];
 	}
 	return ((vol > 0) ? vol : 0);
 }
 
-int		volume_histogram(int *histogram, int size)
+int		volume_histogram(int *arr, int size)
 {
 	int	total_vol = 0;
 	int	i = 0;
@@ -59,10 +57,8 @@ int		volume_histogram(int *histogram, int size)
 
 	while (i < size)
 	{
-		next = next_bigger(histogram, size, i);
-		if (next == -1)
-			break;
-		total_vol += get_block(histogram, i, next);
+		next = next_levee(arr, size, i);
+		total_vol += get_block(arr, i, next);
 		i = next;
 	}
 	return (total_vol);

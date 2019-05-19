@@ -11,14 +11,14 @@ Moulinette-passing versions of Intermediate Exam questions. Subject + code + tra
 * [`count_alpha`](./count_alpha/mine)
 * [`flood_fill`](./flood_fill/mine)
 * [`queue`](./queue/mine)
-* `height_tree`
+* [`height_tree`](./height_tree/mine)
 * [`stack`](./stack/mine)
 ### Level 02
 * [`is_looping`](./is_looping/mine)
 * [`longest_sequence`](./longest_sequence/mine)
 * `ord_alphlong`
 * [`reverse_tree`](./reverse_tree/mine)
-* `str_maxlenoc`
+* [`str_maxlenoc`](./str_maxlenoc/mine)
 ### Level 03
 * [`convert_bst`](./convert_bst/mine)
 * [`gold_gain`](./gold_gain/mine)
@@ -34,4 +34,4 @@ Moulinette-passing versions of Intermediate Exam questions. Subject + code + tra
 * `count_island`
 * `g_diam`
 * `infin_add`
-* `infin_mult`
+* [`infin_mult`](./infin_mult/mine)

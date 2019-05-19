@@ -22,29 +22,19 @@
 **	C = tens
 **	A = both ones and tens
 */
-static void	set_values(int n, int *a, int *b, int *c)
+
+void	equation(int n)
 {
-	int tmp;
+	int	b;
+	int	c;
+	int	tmp;
 
-	(*a)++;
-	tmp = n - (*a * 10) - *a;
-	*b = tmp % 10;
-	*c = tmp / 10;
-}
-
-void		equation(int n)
-{
-	int	a = -1;
-	int b;
-	int c;
-
-	while (1)
+	for (int a = 0; a < 10; ++a)
 	{
-		set_values(n, &a, &b, &c);
-		if ((AB_PLUS_CA(a, b, c) == n)
-			&& (DIGIT(a) && DIGIT(b) && DIGIT(c)))
+		tmp = n - (a * 10 + a);
+		b = tmp % 10;
+		c = tmp / 10;
+		if (DIGIT(b) && DIGIT(c) && AB_PLUS_CA(a, b, c) == n)
 			printf("A = %d, B = %d, C = %d\n", a, b, c);
-		if (!DIGIT(a))
-			break;
 	}
 }
