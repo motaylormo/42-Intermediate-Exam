@@ -20,6 +20,7 @@ Moulinette-passing versions of Intermediate Exam questions. Subject + code + tra
 * [`reverse_tree`](./reverse_tree/mine)
 * [`str_maxlenoc`](./str_maxlenoc/mine)
 ### Level 03
+* `can_split`
 * [`convert_bst`](./convert_bst/mine)
 * [`gold_gain`](./gold_gain/mine)
 * [`perimeter`](./perimeter/mine)
