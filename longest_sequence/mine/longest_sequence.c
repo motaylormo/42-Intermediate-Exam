@@ -22,19 +22,19 @@ struct s_node
 */
 #define CONSEC(a, b)	(a + 1 == b)
 
-static void	send_snake_down(struct s_node *node, int *max, int path)
+static void	send_snake_down(struct s_node *node, int *max, int seq)
 {
-	if (path > *max)
-		*max = path;
+	if (seq > *max)
+		*max = seq;
 	if (node->left)
 	{
 		send_snake_down(node->left, max,
-				(CONSEC(node->value, node->left->value)) ? path + 1 : 1);
+				(CONSEC(node->value, node->left->value)) ? seq + 1 : 1);
 	}
 	if (node->right)
 	{
 		send_snake_down(node->right, max,
-				(CONSEC(node->value, node->right->value)) ? path + 1 : 1);
+				(CONSEC(node->value, node->right->value)) ? seq + 1 : 1);
 	}
 }
 
