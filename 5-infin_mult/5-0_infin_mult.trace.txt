@@ -1,0 +1,41 @@
+= infin_mult ===================================================================
+$> gcc -Wextra -Wall -Werror toolbox.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./jeo6e6mcol6rusexx9j6gml8 "0" "0"
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./tnnpfqvus9mrfaxldjpe6zia "1" "0"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./4e1kx1cf7us653iv0axmtmiq "0" "-2"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./3ifea3f4vgccmo3yus2cyreb "21" "42"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./lj51tmy4xkppa7e0aovrcywh "4894398524132130" "5906754239"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./wayox4hdwzfjvu6qfhlcf9d7 "-449540951245" "1320806146"
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./sq7hpa4obm04mrlqu10xzlax "-395450348096354305805" "-653092"
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

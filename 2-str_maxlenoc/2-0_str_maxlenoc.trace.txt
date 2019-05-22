@@ -1,0 +1,31 @@
+= str_maxlenoc =================================================================
+$> gcc -Wextra -Wall -Werror str_maxlenoc.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./2i7iksgipevurwvwhbndjc50 "Bonjour"
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./dpyqwqldc5t5oolalts6u5qb "bonjouran" "bonjouran" "confiseriean" "bonne annee"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./g36ajxc21ectx7xgy4s8l2c8 "bonjour an" "bonjour an" "confiserie an" "bonne annee"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./c19zeoyihvx7yer22awehlv2 "voila" "voila" "ouais ben voila"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./1wgeyigy3srqj0f5rw2wfjia "bosdsdfnjodur" "atehhellosd" "afkuonjosurafg" "headfgllosf" "fghellosag afdfbosnjourafg"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
