@@ -1,5 +1,5 @@
 # 42-Intermediate-Exam
-Moulinette-passing versions of Intermediate Exam questions. Subject + code + trace.
+Moulinette-passing versions of Intermediate Exam questions. Subject + trace + my passing code + sometimes a test main.
 
 ### Level 00
 * [`count_of_2`](./count_of_2/mine)
