@@ -2,6 +2,7 @@
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
 <div style="column-width: 100px;">
+
 ### Level 00
 | Question      | Moulinette-passing code        | Test main
 | ------------- | ------------------------------ | ----------------
@@ -54,4 +55,5 @@ Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace +
 | g_diam       | TBA                          | TBA
 | infin_add    | TBA                          | TBA
 | infin_mult   | [code](./5-infin_mult/mine)  | [tests](./5-infin_mult/tester)
+
 </div>
