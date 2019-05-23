@@ -76,8 +76,6 @@ $
 ./a.out "a why thrast my pimple pow pew allegiance deer menise euhemeristic sarge or brigatry antialbumid oars gif phthisicky a fore lash champing thule moody a detoxify fem a logs uh sprit tower ha beudanite inlet sat bedebt menses ya consulates beau red pawl chartographically egg mia ghazi mispled damper ped autoput lawless fireplug see boil bargehouse counterplan en off boiserie a bundy frugs sidder fishy ok ack clue selah brim oxygen a footsies tome closh oleraceous dam tug on bauge glood depolariser" | cat -e
 ```
 ## Test 4
-<div style="white-space: pre-wrap;">
-<pre>
+<pre style="white-space:normal;">
 ./a.out "garotes foreboder hash arsenicating accolent ow dims twain handsew outasks fratries hill tot a footraces a comanches potheen skim bike one bacterially nest nay my en dub areostyle railly pre fee joys nepit cite ow coadunate um pox conclavist a axon sparta corelational gyms em daemonian creepingly mirdha buy boxings detruncated vex catbird derealization juts stope gonial ear ziff a a ebionite am smug rue chiasm it preter bitripartite conglobing eflagelliferous gematria corrugator obliger koumyses bye uh oopak ye sos anagogics toughy of prexy fads laigh ok a buss dismiss glimmering aquiform push applenut doest a oh sedged mild decoy fally do seal mien indubitate uh pic yale kymnel aortoiliac beniseed a cercus acroesthesia bradyseismical utick creirgist tuts bostonite kiyas candidacies aye neo pow earl til a intakes ox entocnemial" | cat -e
 </pre>
-</div>
