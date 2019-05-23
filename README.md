@@ -2,11 +2,13 @@
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
 ### Level 00
-* [`count_of_2`](./0-count_of_2/mine)
-* [`equation`](./0-equation/mine)
-* `find_pivot`
-* [`is_anagram`](./0-is_anagram/mine)
-* [`print_doublon`](./0-print_doublon/mine)
+| Question      | Moulinette-passing code        | Test main
+| ------------- | ------------------------------ | ----------------
+| count_of_2    | [code](./0-count_of_2/mine)    | [tester](./0-count_of_2/tester)
+| equation      | [code](./0-equation/mine)      | [tester](./0-equation/tester)
+| find_pivot    | TBA                            | [tester](./0-find_pivot/tester)
+| is_anagram    | [code](./0-is_anagram/mine)    | [tester](./0-is_anagram/tester)
+| print_doublon | [code](./0-print_doublon/mine) | [tester](./0-print_doublon/tester)
 
 ### Level 01
 * [`count_alpha`](./1-count_alpha/mine)
