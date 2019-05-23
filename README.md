@@ -1,7 +1,7 @@
 # 42-Intermediate-Exam
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
-<div style="column-width: 100px;">
+<div style="column-width: 50%;">
 
 ### Level 00
 | Question      | Moulinette-passing code        | Test main
