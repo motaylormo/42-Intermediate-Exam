@@ -2,13 +2,13 @@
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
 ### Level 00
-| Question | Moulinette-passing code | Test main
-| -------- | ----------------------- | ------------
+| Question | Moulinette-passing code | Test main | Trace tests
+| -------- | ----------------------- | --------- | ------------
 | count_of_2    | [:white_check_mark:](./0-count_of_2/mine)    | [:white_check_mark:](./0-count_of_2/tester)
 | equation      | [:white_check_mark:](./0-equation/mine)      | [:white_check_mark:](./0-equation/tester)
 | find_pivot    | :no_entry_sign:                              | [:white_check_mark:](./0-find_pivot/tester)
-| is_anagram    | [:white_check_mark:](./0-is_anagram/mine)    | [:white_check_mark:](./0-is_anagram/tester)
-| print_doublon | [:white_check_mark:](./0-print_doublon/mine) | [:white_check_mark:](./0-print_doublon/tester)
+| is_anagram    | [:white_check_mark:](./0-is_anagram/mine)    | [:white_check_mark:](./0-is_anagram/tester)    | :lock:
+| print_doublon | [:white_check_mark:](./0-print_doublon/mine) | [:white_check_mark:](./0-print_doublon/tester) | :lock:
 
 ### Level 01
 | Question | Moulinette-passing code | Test main
