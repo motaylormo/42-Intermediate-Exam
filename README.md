@@ -15,32 +15,32 @@ Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace +
 | -------- | ----------------------- | --------- | ------------
 | count_alpha | [:white_check_mark:](./1-count_alpha/mine) | [:white_check_mark:](./1-count_alpha/tester)
 | flood_fill  | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign: | :lock:
-| height_tree | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:
-| queue       | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:
-| stack       | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:
+| height_tree | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign: | :grey_question:
+| queue       | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign: | :grey_question:
+| stack       | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign: | :grey_question:
 
 ### Level 02
 | Question | Moulinette-passing code | Test main | Trace tests
 | -------- | ----------------------- | --------- | ------------
-| is_looping       | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:
-| longest_sequence | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign:
+| is_looping       | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign: | :grey_question:
+| longest_sequence | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign: | :grey_question:
 | ord_alphlong     | :no_entry_sign:                                 | :no_entry_sign:
-| reverse_tree     | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:
+| reverse_tree     | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign: | :grey_question:
 | str_maxlenoc     | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:white_check_mark:](./2-str_maxlenoc/tester)
 
 ### Level 03
 | Question | Moulinette-passing code | Test main | Trace tests
 | -------- | ----------------------- | --------- | ------------
-| can_split   | :no_entry_sign:                            | :no_entry_sign:
-| convert_bst | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign:
+| can_split   | :no_entry_sign:                            | :no_entry_sign: | :grey_question:
+| convert_bst | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign: | :grey_question:
 | gold_gain   | [:white_check_mark:](./3-gold_gain/mine)   | [:white_check_mark:](./3-gold_gain/tester) | :lock:
-| perimeter   | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:
-| width_tree  | [:white_check_mark:](./3-width_tree/mine)  | :no_entry_sign:
+| perimeter   | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign: | :grey_question:
+| width_tree  | [:white_check_mark:](./3-width_tree/mine)  | :no_entry_sign: | :grey_question:
 
 ### Level 04
 | Question | Moulinette-passing code | Test main | Trace tests
 | -------- | ----------------------- | --------- | ------------
-| clone_list       | [:white_check_mark:](./4-clone_list/mine)       | :no_entry_sign:
+| clone_list       | [:white_check_mark:](./4-clone_list/mine)       | :no_entry_sign: | :grey_question:
 | intersection     | :no_entry_sign:                                 | :no_entry_sign:
 | longest_subarray | [:white_check_mark:](./4-longest_subarray/mine) | [:white_check_mark:](./4-longest_subarray/tester)
 | range_comb       | :no_entry_sign:                                 | :no_entry_sign:
