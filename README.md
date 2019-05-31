@@ -1,8 +1,8 @@
 # 42-Intermediate-Exam
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
-| Level | Question | Moulinette-passing code | Test main | Trace tests
-| ----- | -------- | ----------------------- | --------- | ------------
+| Level | Question | Code | Tester main | Trace tests
+| ----- | -------- | ---- | ----------- | ------------
 | 0 | count_of_2       | [:white_check_mark:](./0-count_of_2/mine)       | [:white_check_mark:](./0-count_of_2/tester)
 | 0 | equation         | [:white_check_mark:](./0-equation/mine)         | [:white_check_mark:](./0-equation/tester)
 | 0 | find_pivot       | :no_entry_sign:                                 | [:white_check_mark:](./0-find_pivot/tester)
