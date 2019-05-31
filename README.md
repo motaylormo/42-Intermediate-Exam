@@ -3,7 +3,7 @@ Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace +
 
 | Level | Question | Code | Tester main | Trace tests
 | ----- | -------- | ---- | ----------- | ------------
-| 0 | count_of_2       | [:white_check_mark:](./0-count_of_2/mine)       | [:white_check_mark:](./0-count_of_2/tester)
+| 0 | count_of_2       | [:white_check_mark:](./0-count_of_2/mine)       | [:white_check_mark:](./0-count_of_2/tester) | :unlock:
 | 0 | equation         | [:white_check_mark:](./0-equation/mine)         | [:white_check_mark:](./0-equation/tester)
 | 0 | find_pivot       | :no_entry_sign:                                 | [:white_check_mark:](./0-find_pivot/tester)
 | 0 | is_anagram       | [:white_check_mark:](./0-is_anagram/mine)       | [:white_check_mark:](./0-is_anagram/tester)    | :lock:
