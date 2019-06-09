@@ -15,7 +15,7 @@ Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace +
 | 1 | stack            | [:white_check_mark:](./1-stack/mine)            | :no_entry_sign:                                   | :mag_right:
 | 2 | is_looping       | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                                   | :mag_right:
 | 2 | longest_sequence | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign:                                   | :mag_right:
-| 2 | ord_alphlong     | :no_entry_sign:                                 | :no_entry_sign:
+| 2 | ord_alphlong     | [:white_check_mark:](./2-ord_alphlong/mine)]    | [:white_check_mark:](./2-ord_alphlong/tester)     | :open_file_folder:
 | 2 | reverse_tree     | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                                   | :mag_right:
 | 2 | str_maxlenoc     | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:white_check_mark:](./2-str_maxlenoc/tester)     | :open_file_folder:
 | 3 | can_split        | :no_entry_sign:                                 | :no_entry_sign:                                   | :mag_right:
