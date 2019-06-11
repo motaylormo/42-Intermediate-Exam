@@ -12,12 +12,12 @@
 
 #include <stdlib.h>
 
-#define DIGIT(c) (c >= '0' && c <= '9')
-#define IS_ODD(n) (n % 2)
+#define DIGIT(c) ((c) >= '0' && (c) <= '9')
+#define IS_ODD(n) ((n) % 2)
 
 static int	get_subarray(char *arr)
 {
-	int	max = -1;
+	int	max = 0;
 	int	evens = 0;
 	int	odds = 0;
 
@@ -34,9 +34,9 @@ static int	get_subarray(char *arr)
 			if (i > max)
 				max = i;
 	}
-	if (max != -1)
-		return (max + 1);
-	return (max);
+	if (max == 0)
+		return (0);
+	return (max + 1);
 }
 
 /*
