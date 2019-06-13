@@ -3,80 +3,80 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/08 18:56:01 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/06/08 18:56:02 by mtaylor          ###   ########.fr       */
+/*   Created: 2019/06/11 10:04:52 by exam              #+#    #+#             */
+/*   Updated: 2019/06/11 10:43:12 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ord_alphlong.h"
 
-#define TO_LOWER(c) ((c >= 'A' && c <= 'Z') ? (c + ('a' - 'A')) : c)
-
-int		compare_words(char *a, char *b)
+int		alpha_order(char *a, char *b)
 {
-	int len_a = ft_strlen(a);
-	int len_b = ft_strlen(b);
-	if (len_a != len_b)
-		return (len_a - len_b);
-
 	int i = 0;
-	while (i < len_a && TO_LOWER(a[i]) == TO_LOWER(b[i]))
-		++i;
-	return (TO_LOWER(a[i]) - TO_LOWER(b[i]));
+	while (a[i] && b[i])
+	{
+		if (ft_tolower(a[i]) < ft_tolower(b[i]))
+			return (1);
+		if (ft_tolower(a[i]) > ft_tolower(b[i]))
+			return (0);
+		if (ft_tolower(a[i]) == ft_tolower(b[i]))
+			i++;
+	}
+	if (a[i] && !b[i])
+		return (0);
+	return (1);
 }
 
-void	sort_words(char **words)
+void	bubble_sort(char **arr)
 {
-	int swapped = 1;
+	char *tmp;
 
-	while (swapped)
+	for (int r = 0; arr[r]; ++r)
 	{
-		swapped = 0;
-		for (int i = 1; words[i]; ++i)
+		for (int i = 1; arr[i]; ++i)
 		{
-			if (compare_words(words[i - 1], words[i]) > 0)
+			if (!alpha_order(arr[i - 1], arr[i]))
 			{
-				swap(&words[i - 1], &words[i]);
-				swapped = 1;
+				tmp = arr[i - 1];
+				arr[i - 1] = arr[i];
+				arr[i] = tmp;
 			}
 		}
 	}
 }
 
-void	print_words(char **words)
+void	ord_alphlong(char *str)
 {
-	int len = ft_strlen(words[0]);
-	int	cur_len;
-
-	for (int i = 0; words[i]; ++i)
+	char	**words;
+	int		tally;
+	
+	words = ft_strsplit(str);
+	bubble_sort(words);
+	for (int len = 1; len <= ft_strlen(str); ++len)
 	{
-		cur_len = ft_strlen(words[i]);
-		if (i != 0)
+		tally = 0;
+		for (int i = 0; words[i]; ++i)
 		{
-			if (cur_len == len)
-				ft_putstr(" ");
-			else
+			if (ft_strlen(words[i]) == len)
 			{
-				len = cur_len;
-				ft_putstr("\n");
+				if (tally > 0)
+					ft_putstr(" ");
+				ft_putstr(words[i]);
+				tally++;
 			}
 		}
-		ft_putstr(words[i]);
+		if (tally > 0)
+			ft_putstr("\n");
 	}
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	char **words;
-
-	if ((argc == 2) && (words = ft_strsplit(argv[1])))
-	{
-		sort_words(words);
-		print_words(words);
-		free(words);
-	}
-	write(1, "\n", 1);
+	if (argc == 2)
+		ord_alphlong(argv[1]);
+	else
+		ft_putstr("\n");
 	return (0);
 }
