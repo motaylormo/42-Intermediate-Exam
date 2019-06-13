@@ -4,11 +4,11 @@ Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace +
 <table>
 <tbody>
 <tr>
-  <td>Level</td>
-  <td>Question</td>
-  <td>Solution</td>
-  <td>Tester main</td>
-  <td>Trace tests accessibility</td>
+  <td><b>Level</b></td>
+  <td><b>Question</b></td>
+  <td><b>Solution</b></td>
+  <td><b>Tester main</b></td>
+  <td><b>Trace tests accessibility</b></td>
 </tr>
 <tr>
   <td>0</td>
