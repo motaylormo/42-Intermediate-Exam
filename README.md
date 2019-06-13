@@ -9,7 +9,7 @@ Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace +
 $> ./3sdnrgu2oip0738azjrotz8n test_correct_a_00.txt test_correct_b_00.txt
 $> diff -U 3 user_output_test1 test1.output | cat -e
 ```
-* :microscope: means the traces show _something_, but not enough to recreate the test ourselves. This is particularly common among questions that take structs as input.
+* :crystal_ball: means the traces show _something_, but not enough to recreate the test ourselves. This is particularly common among questions that take structs as input.
 
 ### Level 0
 | Question | Solution | Tester main | Trace test accessibility
@@ -25,32 +25,32 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | -------- | -------- | ----------- | ------------------------
 | [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:white_check_mark:](./1-count_alpha/tester) | :open_file_folder:
 | [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign:                              | :lock:
-| [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                              | :microscope:
-| [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                              | :microscope:
-| [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                              | :microscope:
+| [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                              | :crystal_ball:
+| [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                              | :crystal_ball:
+| [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                              | :crystal_ball:
 
 ### Level 2
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
-| [is_looping](./2-is_looping)             | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                               | :microscope:
-| [longest_sequence](./2-longest_sequence) | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign:                               | :microscope:
+| [is_looping](./2-is_looping)             | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                               | :crystal_ball:
+| [longest_sequence](./2-longest_sequence) | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign:                               | :crystal_ball:
 | [ord_alphlong](./2-ord_alphlong)         | [:white_check_mark:](./2-ord_alphlong/mine)     | [:white_check_mark:](./2-ord_alphlong/tester) | :open_file_folder:
-| [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                               | :microscope:
+| [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                               | :crystal_ball:
 | [str_maxlenoc](./2-str_maxlenoc)         | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:white_check_mark:](./2-str_maxlenoc/tester) | :open_file_folder:
 
 ### Level 3
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
-| [can_split](./3-can_split)     | :no_entry_sign:                            | :no_entry_sign:                            | :microscope:
-| [convert_bst](./3-convert_bst) | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign:                            | :microscope:
+| [can_split](./3-can_split)     | :no_entry_sign:                            | :no_entry_sign:                            | :crystal_ball:
+| [convert_bst](./3-convert_bst) | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign:                            | :crystal_ball:
 | [gold_gain](./3-gold_gain)     | [:white_check_mark:](./3-gold_gain/mine)   | [:white_check_mark:](./3-gold_gain/tester) | :lock:
-| [perimeter](./3-perimeter)     | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:                            | :microscope:
-| [width_tree](./3-width_tree)   | [:white_check_mark:](./3-width_tree/mine)  | :no_entry_sign:                            | :microscope:
+| [perimeter](./3-perimeter)     | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:                            | :crystal_ball:
+| [width_tree](./3-width_tree)   | [:white_check_mark:](./3-width_tree/mine)  | :no_entry_sign:                            | :crystal_ball:
 
 ### Level 4
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
-| [clone_list](./4-clone_list)             | [:white_check_mark:](./4-clone_list/mine)       | :no_entry_sign:                                   | :microscope:
+| [clone_list](./4-clone_list)             | [:white_check_mark:](./4-clone_list/mine)       | :no_entry_sign:                                   | :crystal_ball:
 | [intersection](./4-intersection)         | :no_entry_sign:                                 | :no_entry_sign:
 | [longest_subarray](./4-longest_subarray) | [:white_check_mark:](./4-longest_subarray/mine) | [:white_check_mark:](./4-longest_subarray/tester) | :open_file_folder:
 | [range_comb](./4-range_comb)             | :no_entry_sign:                                 | :no_entry_sign:
