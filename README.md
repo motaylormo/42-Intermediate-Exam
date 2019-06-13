@@ -2,8 +2,7 @@
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
 <details><summary><b>Table conventions</b></summary>
-
-**Trace test accessibility** refers to, "When I look at the trace for this question, can I tell what the tests are?"
+Trace test accessibility refers to, "When I look at the trace for this question, can I tell what the tests are?"
 * :open_file_folder: means yes—the tests are accessible.
 * :lock: means no—the tests are locked away in files. It might look something like:
 ```
@@ -14,7 +13,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 * :crystal_ball: means the traces show _something_, but not enough to recreate the test ourselves. This is particularly common among questions that take structs as input.
 </details>
 
-### Level 0
+## Level 0
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [count_of_2](./0-count_of_2)       | [:white_check_mark:](./0-count_of_2/mine)    | [:white_check_mark:](./0-count_of_2/tester)    | :open_file_folder:
@@ -23,7 +22,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [is_anagram](./0-is_anagram)       | [:white_check_mark:](./0-is_anagram/mine)    | [:white_check_mark:](./0-is_anagram/tester)    | :lock:
 | [print_doublon](./0-print_doublon) | [:white_check_mark:](./0-print_doublon/mine) | [:white_check_mark:](./0-print_doublon/tester) | :lock:
 
-### Level 1
+## Level 1
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:eight_spoked_asterisk:](./1-count_alpha/tester) | :open_file_folder:
@@ -32,7 +31,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                                   | :crystal_ball:
 | [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                                   | :crystal_ball:
 
-### Level 2
+## Level 2
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [is_looping](./2-is_looping)             | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                                    | :crystal_ball:
@@ -41,7 +40,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                                    | :crystal_ball:
 | [str_maxlenoc](./2-str_maxlenoc)         | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:eight_spoked_asterisk:](./2-str_maxlenoc/tester) | :open_file_folder:
 
-### Level 3
+## Level 3
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [can_split](./3-can_split)     | :no_entry_sign:                            | :no_entry_sign:                            | :crystal_ball:
@@ -50,7 +49,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [perimeter](./3-perimeter)     | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:                            | :crystal_ball:
 | [width_tree](./3-width_tree)   | [:white_check_mark:](./3-width_tree/mine)  | :no_entry_sign:                            | :crystal_ball:
 
-### Level 4
+## Level 4
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [clone_list](./4-clone_list)             | [:white_check_mark:](./4-clone_list/mine)       | :no_entry_sign:                                   | :crystal_ball:
@@ -59,7 +58,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [range_comb](./4-range_comb)             | :no_entry_sign:                                 | :no_entry_sign:
 | [volume_histogram](./4-volume_histogram) | [:white_check_mark:](./4-volume_histogram/mine) | [:white_check_mark:](./4-volume_histogram/tester) | :open_file_folder:
 
-### Level 5
+## Level 5
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [count_island](./5-count_island) | :no_entry_sign:                           | :no_entry_sign:
