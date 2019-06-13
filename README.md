@@ -1,21 +1,11 @@
 # 42-Intermediate-Exam
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
-<table>
-<tbody>
-<tr>
-  <td><b>Level</b></td>
-  <td><b>Question</b></td>
-  <td><b>Solution</b></td>
-  <td><b>Tester main</b></td>
-  <td><b>Trace tests accessibility</b></td>
-</tr>
-<tr>
-  <td>0</td>
-  <td><a href="./0-count_of_2">count_of_2</a></td>
-  <td><a href="./0-count_of_2/mine">:white_check_mark:</a></td>
-  <td><a href="./0-count_of_2/tester">:white_check_mark:</a></td>
-  <td>:open_file_folder:</td>
-</tr>
-</tbody>
-</table>
+### Level 0
+| Question | Solution | Tester main | Trace test accessibility
+| -------- | -------- | ----------- | ------------------------
+| [count_of_2](./0-count_of_2)       | [:white_check_mark:](./0-count_of_2/mine)    | [:white_check_mark:](./0-count_of_2/tester)    | :open_file_folder:
+| [equation](./0-equation)           | [:white_check_mark:](./0-equation/mine)      | [:white_check_mark:](./0-equation/tester)      | :open_file_folder:
+| [find_pivot](./0-find_pivot)       | :no_entry_sign:                              | [:white_check_mark:](./0-find_pivot/tester)    | :lock:
+| [is_anagram](./0-is_anagram)       | [:white_check_mark:](./0-is_anagram/mine)    | [:white_check_mark:](./0-is_anagram/tester)    | :lock:
+| [print_doublon](./0-print_doublon) | [:white_check_mark:](./0-print_doublon/mine) | [:white_check_mark:](./0-print_doublon/tester) | :lock:
