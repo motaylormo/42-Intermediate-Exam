@@ -2,6 +2,7 @@
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
 <details><summary><b>Table conventions</b></summary>
+
 Trace test accessibility refers to, "When I look at the trace for this question, can I tell what the tests are?"
 * :open_file_folder: means yes—the tests are accessible.
 * :lock: means no—the tests are locked away in files. It might look something like:
