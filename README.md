@@ -1,6 +1,5 @@
 # 42-Intermediate-Exam
-Moulinette-passing versions of Intermediate Exam questions.
-Subject + trace + my passing code + sometimes a test main.
+Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
 ### Level 0
 | Question | Solution | Tester main | Trace test accessibility
