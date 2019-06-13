@@ -11,23 +11,15 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 ```
 * :crystal_ball: means the traces show _something_, but not enough to recreate the test ourselves. This is particularly common among questions that take structs as input.
 
-### Level 0
+### Levels 0 and 1
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
-| [count_of_2](./0-count_of_2)       | [:white_check_mark:](./0-count_of_2/mine)    | [:white_check_mark:](./0-count_of_2/tester)    | :open_file_folder:
-| [equation](./0-equation)           | [:white_check_mark:](./0-equation/mine)      | [:white_check_mark:](./0-equation/tester)      | :open_file_folder:
-| [find_pivot](./0-find_pivot)       | :no_entry_sign:                              | [:white_check_mark:](./0-find_pivot/tester)    | :lock:
-| [is_anagram](./0-is_anagram)       | [:white_check_mark:](./0-is_anagram/mine)    | [:white_check_mark:](./0-is_anagram/tester)    | :lock:
-| [print_doublon](./0-print_doublon) | [:white_check_mark:](./0-print_doublon/mine) | [:white_check_mark:](./0-print_doublon/tester) | :lock:
+| [count_of_2](./0-count_of_2)       | [:white_check_mark:](./0-count_of_2/mine)    | [:white_check_mark:](./0-count_of_2/tester)    | :open_file_folder:| [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:eight_spoked_asterisk:](./1-count_alpha/tester) | :open_file_folder:
+| [equation](./0-equation)           | [:white_check_mark:](./0-equation/mine)      | [:white_check_mark:](./0-equation/tester)      | :open_file_folder:| [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign:                                   | :lock:
+| [find_pivot](./0-find_pivot)       | :no_entry_sign:                              | [:white_check_mark:](./0-find_pivot/tester)    | :lock:| [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                                   | :crystal_ball:
+| [is_anagram](./0-is_anagram)       | [:white_check_mark:](./0-is_anagram/mine)    | [:white_check_mark:](./0-is_anagram/tester)    | :lock:| [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                                   | :crystal_ball:
+| [print_doublon](./0-print_doublon) | [:white_check_mark:](./0-print_doublon/mine) | [:white_check_mark:](./0-print_doublon/tester) | :lock: | [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                                   | :crystal_ball:
 
-### Level 1
-| Question | Solution | Tester main | Trace test accessibility
-| -------- | -------- | ----------- | ------------------------
-| [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:eight_spoked_asterisk:](./1-count_alpha/tester) | :open_file_folder:
-| [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign:                                   | :lock:
-| [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                                   | :crystal_ball:
-| [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                                   | :crystal_ball:
-| [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                                   | :crystal_ball:
 
 ### Level 2
 | Question | Solution | Tester main | Trace test accessibility
