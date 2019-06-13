@@ -23,20 +23,20 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 ### Level 1
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
-| [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:white_check_mark:](./1-count_alpha/tester) | :open_file_folder:
-| [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign:                              | :lock:
-| [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                              | :crystal_ball:
-| [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                              | :crystal_ball:
-| [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                              | :crystal_ball:
+| [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:eight_spoked_asterisk:](./1-count_alpha/tester) | :open_file_folder:
+| [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign:                                   | :lock:
+| [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                                   | :crystal_ball:
+| [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                                   | :crystal_ball:
+| [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                                   | :crystal_ball:
 
 ### Level 2
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
-| [is_looping](./2-is_looping)             | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                               | :crystal_ball:
-| [longest_sequence](./2-longest_sequence) | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign:                               | :crystal_ball:
-| [ord_alphlong](./2-ord_alphlong)         | [:white_check_mark:](./2-ord_alphlong/mine)     | [:white_check_mark:](./2-ord_alphlong/tester) | :open_file_folder:
-| [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                               | :crystal_ball:
-| [str_maxlenoc](./2-str_maxlenoc)         | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:white_check_mark:](./2-str_maxlenoc/tester) | :open_file_folder:
+| [is_looping](./2-is_looping)             | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                                    | :crystal_ball:
+| [longest_sequence](./2-longest_sequence) | [:white_check_mark:](./2-longest_sequence/mine) | :no_entry_sign:                                    | :crystal_ball:
+| [ord_alphlong](./2-ord_alphlong)         | [:white_check_mark:](./2-ord_alphlong/mine)     | [:eight_spoked_asterisk:](./2-ord_alphlong/tester) | :open_file_folder:
+| [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                                    | :crystal_ball:
+| [str_maxlenoc](./2-str_maxlenoc)         | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:eight_spoked_asterisk:](./2-str_maxlenoc/tester) | :open_file_folder:
 
 ### Level 3
 | Question | Solution | Tester main | Trace test accessibility
@@ -62,4 +62,4 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [count_island](./5-count_island) | :no_entry_sign:                           | :no_entry_sign:
 | [g_diam](./5-g_diam)             | :no_entry_sign:                           | :no_entry_sign:
 | [infin_add](./5-infin_add)       | :no_entry_sign:                           | :no_entry_sign:
-| [infin_mult](./5-infin_mult)     | [:white_check_mark:](./5-infin_mult/mine) | [:white_check_mark:](./5-infin_mult/tester) | :open_file_folder:
+| [infin_mult](./5-infin_mult)     | [:white_check_mark:](./5-infin_mult/mine) | [:eight_spoked_asterisk:](./5-infin_mult/tester) | :open_file_folder:
