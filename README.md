@@ -1,6 +1,16 @@
 # 42-Intermediate-Exam
 Moulinette-passing versions of Intermediate Exam questions.<br>Subject + trace + my passing code + sometimes a test main.
 
+Trace test accessibility refers to, "When I look at the trace for this question, can I tell what the tests are?"
+* :open_file_folder: means yes—the tests are accessible
+* :lock: means no—the tests are locked away in files. It might look something like:
+```
+= Test 1 ===================================================
+$> ./3sdnrgu2oip0738azjrotz8n test_correct_a_00.txt test_correct_b_00.txt
+$> diff -U 3 user_output_test1 test1.output | cat -e
+```
+* :microscope: means the traces show _something_, but not enough to recreate the test ourselves. This is particularly common among questions that take structs as input.
+
 ### Level 0
 | Question | Solution | Tester main | Trace test accessibility
 | -------- | -------- | ----------- | ------------------------
