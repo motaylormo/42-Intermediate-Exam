@@ -3,63 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   volume_histogram.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/15 13:17:27 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/05/15 13:17:29 by mtaylor          ###   ########.fr       */
+/*   Created: 2019/06/18 10:21:22 by exam              #+#    #+#             */
+/*   Updated: 2019/06/18 10:21:23 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define SMALLER(a, b)	((a <= b) ? a : b)
+#define	SMALLER(a, b)	((a < b) ? a : b)
 
 /*
-**	Find the next levee that is >= the first levee
-**		of (if there are no >= levees left) the biggest levee left
+**	Find the next levee that is >= the first levee.
+**	If there are no >= ones left, then the biggest levee remaining.
 */
-static int	next_levee(int *arr, int size, int i)
+static int	next_levee(int *arr, int size, int curr)
 {
-	int	levee1 = arr[i];
-	int	backup;
+	int	backup = size - 1;
 
-	backup = i + 1;
-	while (++i < size)
+	for (int i = curr + 1; i < size; ++i)
 	{
-		if (arr[i] >= levee1)
+		if (arr[i] >= arr[curr])
 			return (i);
-		if (arr[i] > arr[backup])
+		if (arr[i] >= arr[backup])
 			backup = i;
 	}
-	return ((backup < size) ? backup : size);
+	return (backup);
 }
 
-/*
-**	Find the volumn between the two levees
-**		then remove any smaller walls inside (displaced water)
-*/
-static int	get_block(int *arr, int levee1, int levee2)
+static int	get_block_volume(int *arr, int levee1, int levee2)
 {
-	int	vol;
+	int	vol = SMALLER(arr[levee1], arr[levee2]) * (levee2 - levee1 - 1);
 
-	vol = SMALLER(arr[levee1], arr[levee2]) * (levee2 - levee1 - 1);
-
+	//	displaced water
 	for (int i = levee1 + 1; i < levee2; ++i)
 	{
 		vol -= arr[i];
 	}
-	return ((vol > 0) ? vol : 0);
+	return ((vol < 0) ? 0 : vol);
 }
 
-int		volume_histogram(int *arr, int size)
+int		volume_histogram(int *histogram, int size)
 {
-	int	total_vol = 0;
-	int	i = 0;
-	int	next;
+	int	sum = 0;
+	int	levee1 = 0;
+	int	levee2;
 
-	while (i < size)
+	while (levee1 < size - 1)
 	{
-		next = next_levee(arr, size, i);
-		total_vol += get_block(arr, i, next);
-		i = next;
+		levee2 = next_levee(histogram, size, levee1);
+		sum += get_block_volume(histogram, levee1, levee2);
+		levee1 = levee2;
 	}
-	return (total_vol);
+	return (sum);
 }
