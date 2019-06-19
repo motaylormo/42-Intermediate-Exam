@@ -64,5 +64,5 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | -------- | -------- | ----------- | ------------------------
 | [count_island](./5-count_island) | :no_entry_sign:                           | :no_entry_sign:
 | [g_diam](./5-g_diam)             | :no_entry_sign:                           | :no_entry_sign:
-| [infin_add](./5-infin_add)       | :no_entry_sign:                           | :no_entry_sign:
+| [infin_add](./5-infin_add)       | :no_entry_sign:                           | [:eight_spoked_asterisk:](./5-infin_add/tester) | :open_file_folder:
 | [infin_mult](./5-infin_mult)     | [:white_check_mark:](./5-infin_mult/mine) | [:eight_spoked_asterisk:](./5-infin_mult/tester) | :open_file_folder:
