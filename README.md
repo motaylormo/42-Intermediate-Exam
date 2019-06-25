@@ -44,7 +44,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 ## Level 3
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
-| [can_split](./3-can_split)     | :no_entry_sign:                            | :no_entry_sign:                            | :crystal_ball:
+| [can_split](./3-can_split)     | [:white_check_mark:](./3-can_split/mine)   | :no_entry_sign:                            | :crystal_ball:
 | [convert_bst](./3-convert_bst) | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign:                            | :crystal_ball:
 | [gold_gain](./3-gold_gain)     | [:white_check_mark:](./3-gold_gain/mine)   | [:white_check_mark:](./3-gold_gain/tester) | :lock:
 | [perimeter](./3-perimeter)     | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:                            | :crystal_ball:
