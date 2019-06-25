@@ -38,7 +38,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [is_looping](./2-is_looping)             | [:white_check_mark:](./2-is_looping/mine)       | :no_entry_sign:                                    | :crystal_ball:
 | [longest_sequence](./2-longest_sequence) | [:white_check_mark:](./2-longest_sequence/mine) | [:white_check_mark:](./2-longest_sequence/tester)  | :crystal_ball:
 | [ord_alphlong](./2-ord_alphlong)         | [:white_check_mark:](./2-ord_alphlong/mine)     | [:eight_spoked_asterisk:](./2-ord_alphlong/tester) | :open_file_folder:
-| [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | :no_entry_sign:                                    | :crystal_ball:
+| [reverse_tree](./2-reverse_tree)         | [:white_check_mark:](./2-reverse_tree/mine)     | [:white_check_mark:](./2-reverse_tree/tester)      | :crystal_ball:
 | [str_maxlenoc](./2-str_maxlenoc)         | [:white_check_mark:](./2-str_maxlenoc/mine)     | [:eight_spoked_asterisk:](./2-str_maxlenoc/tester) | :open_file_folder:
 
 ## Level 3
