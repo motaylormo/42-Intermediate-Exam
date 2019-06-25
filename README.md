@@ -44,11 +44,11 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 ## Level 3
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
-| [can_split](./3-can_split)     | [:white_check_mark:](./3-can_split/mine)   | [:white_check_mark:](./3-can_split/tester) | :crystal_ball:
-| [convert_bst](./3-convert_bst) | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign:                            | :crystal_ball:
-| [gold_gain](./3-gold_gain)     | [:white_check_mark:](./3-gold_gain/mine)   | [:white_check_mark:](./3-gold_gain/tester) | :lock:
-| [perimeter](./3-perimeter)     | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:                            | :crystal_ball:
-| [width_tree](./3-width_tree)   | [:white_check_mark:](./3-width_tree/mine)  | :no_entry_sign:                            | :crystal_ball:
+| [can_split](./3-can_split)     | [:white_check_mark:](./3-can_split/mine)   | [:white_check_mark:](./3-can_split/tester)  | :crystal_ball:
+| [convert_bst](./3-convert_bst) | [:white_check_mark:](./3-convert_bst/mine) | :no_entry_sign:                             | :crystal_ball:
+| [gold_gain](./3-gold_gain)     | [:white_check_mark:](./3-gold_gain/mine)   | [:white_check_mark:](./3-gold_gain/tester)  | :lock:
+| [perimeter](./3-perimeter)     | [:white_check_mark:](./3-perimeter/mine)   | :no_entry_sign:                             | :crystal_ball:
+| [width_tree](./3-width_tree)   | [:white_check_mark:](./3-width_tree/mine)  | [:white_check_mark:](./3-width_tree/tester) | :crystal_ball:
 
 ## Level 4
 | Question | Solution | Tester main | Trace test<br>accessibility
