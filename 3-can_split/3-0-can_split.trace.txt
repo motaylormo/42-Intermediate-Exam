@@ -2,18 +2,68 @@
 $> gcc -Wextra -Wall -Werror can_split.c main.c -o user_exe 
 
 = Test 1 ===================================================
-$> ./wm87z0qtdxdadpkr7j1hpu63 13 4
+$> ./gk7jq4bzgx6h5n2ila43bklb NNENNEENN
 $> diff -U 3 user_output_test1 test1.output | cat -e
 
 Diff OK :D
 = Test 2 ===================================================
-$> ./gnwl23ipyqp4bjz981vpzqgx 1000 4
+$> ./ine7xo0ji8aam9ojhy0e0q5f NNN
 $> diff -U 3 user_output_test2 test2.output | cat -e
 
 Diff OK :D
 = Test 3 ===================================================
-$> ./npefh8t18ds1lh9e52e02phf 250000 90
+$> ./go39m67yjyy5v9s2mnwkvw59 NNNNEN
 $> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./025zoe6clg3bzzhvx9cy47hl NEN
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./z5egyfplmctqb0nigobayg7o N
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./i602t47ac5ba8d143arre0t7 E
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./rsryb3dpdq353bj1v2g0ymug NNNEENNEEEENNEN
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./nuosuydhq363xkciyequtrie NNNEENNEEEENNENEEEEEEEENN
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./q7mpm2xy2p6qulznzpo9j910 NENEEENEEEEEEEN
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./rfi519cxlotjb8inz4vieoc9 13 4
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./gn01rtku7322dhiemi7qmjva 1000 4
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+= Test 12 ==================================================
+$> ./p1ng64gt33ubbea8f6j5eifk 250000 90
+$> diff -U 3 user_output_test12 test12.output | cat -e
+
+Diff OK :D
+= Test 13 ==================================================
+$> ./xb0tovd8rc5c6rqaqqmnjows 10001 29 1
+$> diff -U 3 user_output_test13 test13.output | cat -e
 
 Diff OK :D
 Grade: 1
