@@ -48,6 +48,7 @@ int main(void)
 	printf("TESTS FROM SUBJECT:\n");
 	for (int i = 0; i < SUBJ_TEST_COUNT; ++i)
 	{
+		printf("\nExample %d: ", i + 1);
 		run_test(g_subj_tests[i], g_subj_answers[i]);
 	}
 	return (0);
