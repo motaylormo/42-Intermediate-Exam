@@ -27,7 +27,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [count_alpha](./1-count_alpha) | [:white_check_mark:](./1-count_alpha/mine) | [:eight_spoked_asterisk:](./1-count_alpha/tester) | :open_file_folder:
-| [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | :no_entry_sign:                                   | :lock:
+| [flood_fill](./1-flood_fill)   | [:white_check_mark:](./1-flood_fill/mine)  | [:white_check_mark:](./1-flood_fill/tester)       | :lock:
 | [height_tree](./1-height_tree) | [:white_check_mark:](./1-height_tree/mine) | :no_entry_sign:                                   | :crystal_ball:
 | [queue](./1-queue)             | [:white_check_mark:](./1-queue/mine)       | :no_entry_sign:                                   | :crystal_ball:
 | [stack](./1-stack)             | [:white_check_mark:](./1-stack/mine)       | :no_entry_sign:                                   | :crystal_ball:
