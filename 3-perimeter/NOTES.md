@@ -15,7 +15,7 @@ I've marked it up:
 * Leaf nodes are in `[]`
 * Rightmost line of descent nodes are in `{}`
 
-```
+```c
                  <92>
                   / \
                  /   \
