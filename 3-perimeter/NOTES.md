@@ -11,9 +11,9 @@ Here is the tree from the subject, for whom the output is: ```92 85 79 96 58 58 
 
 I've marked it up:
 * Root node is in `<>`
-* Leftmost nodes are in `()`
+* Leftmost line of descent nodes are in `()`
 * Leaf nodes are in `[]`
-* Rightmost nodes are in `{}`
+* Rightmost line of descent nodes are in `{}`
 
 ```
                  <92>
