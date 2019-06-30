@@ -15,15 +15,14 @@
 **	the number of 2s that appear in all the numbers between 0 and n (inclusive).
 */
 
-static int	digit_2s(int num, int twos)
+static int	nums_2s(int num, int twos)
 {
 	if (num % 10 == 2)
 		twos++;
-
 	if (num < 10)
 		return (twos);
 	else
-		return (digit_2s(num / 10, twos));
+		return (nums_2s(num / 10, twos));
 }
 
 int			count_of_2(int n)
@@ -31,7 +30,7 @@ int			count_of_2(int n)
 	int	sum = 0;
 	for (int i = 0; i <= n; ++i)
 	{
-		sum += digit_2s(i, 0);
+		sum += nums_2s(i, 0);
 	}
 	return (sum);
 }
