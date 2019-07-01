@@ -62,6 +62,9 @@ void	print_tree(struct s_node *n)
 
 void subject_tests(void)
 {
+	printf("\e[100mTESTS FROM SUBJECT\e[0m\n");
+	
+	printf("\e[1mTest 1:\e[0m ");
 	struct s_node *tree = N(94,
 		N(34,
 			N(1, L(20), NULL),
@@ -80,7 +83,6 @@ void subject_tests(void)
 			N(1, NULL, L(20))
 		)
 	);
-	printf("Subject test: ");
 	run_test(tree, answer);
 }
 

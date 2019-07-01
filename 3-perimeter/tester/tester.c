@@ -27,20 +27,16 @@ void	perimeter(struct s_node *root);
 
 void	run_test(struct s_node *tree, char *answer)
 {
-	dprintf(STDERR_FILENO, "   your output: ");
+	printf("   your output: ");
 	perimeter(tree);
-
-	if (strcmp((char*)stdout->_p, answer) == 0)
-		dprintf(STDERR_FILENO, "\e[3;32mCorrect\e[0m\n");
-	else
-	{
-		dprintf(STDERR_FILENO, "correct output: %s", answer);
-		dprintf(STDERR_FILENO, "\e[3;31mIncorrect\e[0m\n");
-	}
+	printf("correct output: %s", answer);
 }
 
 void subject_tests(void)
 {
+	printf("\e[100mTESTS FROM SUBJECT\e[0m\n");
+	
+	printf("\e[1mTest 1:\e[0m\n");
 	struct s_node *tree = N(92,
 		N(85,
 			N(79,
@@ -78,7 +74,6 @@ void subject_tests(void)
 		)
 	);
 	char *answer = "92 85 79 96 58 58 41 22 35 31 55 99 51 85 78 64 26\n";
-	printf("Subject test:\n");
 	run_test(tree, answer);
 }
 

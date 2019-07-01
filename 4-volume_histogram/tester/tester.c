@@ -14,6 +14,12 @@
 #include <stdio.h>//	printf()
 #include <stdlib.h>//	atoi() & malloc()
 
+# define MAX_FOR_DIAGRAM 500
+static int flag;
+
+int		parse_flags(int argc, char **argv);
+void	print_diagram(int *arr, int size);
+
 int		volume_histogram(int *histogram, int size);
 
 /*
@@ -53,9 +59,6 @@ static int	g_moul_answers[] = {
 	0, 0, 1, 0, 17, 343, 211, 26, 46
 };
 
-# define BOLD	"\e[1m"
-# define DIM	"\e[2m"
-# define OFF	"\e[0m"
 
 void	print_array(char *name, int *arr, int size)
 {
@@ -70,94 +73,48 @@ void	print_array(char *name, int *arr, int size)
 	printf("\tsize = %d;\n", size);
 }
 
-int		is_walled(int *arr, int size, int index, int level)
+void	run_test(int test_arr[MAX_ARR_SIZE], int test_size, int answer)
 {
-	int	left = 0;
-	int right = 0;
-	for (int i = 0; i < size; ++i)
-	{
-		if (i < index && (arr[i] > level))
-			left = 1;
-		if (i > index && (arr[i] > level))
-			right = 1;
-	}
-	return ((left && right) ? 1 : 0);
+	int ret = volume_histogram(test_arr, test_size);
+	printf((ret == answer) ? "\e[3;32mCorrect\e[0m\n" : "\e[3;31mIncorrect\e[0m\n");
+	print_array("histogram", test_arr, test_size);
+	printf("  your return = %d\n", ret);
+	if (ret != answer)
+		printf("should return = %d\n", answer);
+	if (flag == 1)// && answer > 0 && test < MAX_FOR_DIAGRAM)
+		print_diagram(test_arr, test_size);
 }
 
-void	print_diagram(int *arr, int size)
+void	run_test_set(char *str, int count, int test_arrs[][MAX_ARR_SIZE], int *test_size, int* answers)
 {
-	int	max = arr[0];
-	for (int i = 0; i < size; ++i)
+	printf("\e[100m%s\e[0m\n", str);
+	for (int i = 0; i < count; ++i)
 	{
-		if (arr[i] > max)
-			max = arr[i];
-	}
-	printf(DIM);
-	for (int level = max - 1; level >= 0; --level)
-	{
-		for (int i = 0; i < size; ++i)
-		{
-			if (i > 0)
-				printf(" ");
-			if (arr[i] > level)
-				printf("#");
-			else if (is_walled(arr, size, i, level))
-				printf(".");
-			else
-				printf(" ");
-		}
+		printf("\e[1mTest %d:\e[0m ", i + 1);
+		run_test(test_arrs[i], test_size[i], answers[i]);
 		printf("\n");
 	}
-	for (int i = 0; i < (size * 2) - 1; ++i)
-		printf("-");
-	printf(OFF "\n");
-}
-
-void	run_test(int tests_arr[MAX_ARR_SIZE], int tests_size, int answer)
-{
-	int ret = volume_histogram(tests_arr, tests_size);
-	if (ret == answer)
-		printf("\e[3;32mCorrect\e[0m\n");
-	else
-		printf("\e[3;31mIncorrect\e[0m\n");
-	print_array("histogram", tests_arr, tests_size);
-	if (ret == answer)
-		printf("return = %d\n", ret);
-	else
-	{
-		printf("should return = %d\n", answer);
-		printf("  your return = %d\n", ret);
-	}
-	print_diagram(tests_arr, tests_size);
-
-	printf("\n");
 }
 
 int		main(int argc, char **argv)
 {
-	if (argc < 2)
+	flag = parse_flags(argc, argv);
+	if (argc < 2 || (argc < 3 && flag))
 	{
-		printf(BOLD "TESTS FROM SUBJECT:" OFF "\n");
-		for (int i = 0; i < SUBJ_TEST_COUNT; ++i)
-		{
-			printf(BOLD "Test %d:" OFF " ", i + 1);
-			run_test(g_subj_tests_arr[i], g_subj_tests_size[i], g_subj_answers[i]);
-		}
-		printf("\n");
-		printf(BOLD "TESTS FROM TRACE:" OFF "\n");
-		for (int i = 0; i < MOUL_TEST_COUNT; ++i)
-		{
-			printf(BOLD "Test %d:" OFF " ", i + 1);
-			run_test(g_moul_tests_arr[i], g_moul_tests_size[i], g_moul_answers[i]);
-		}
+		run_test_set("TESTS FROM SUBJECT", SUBJ_TEST_COUNT, g_subj_tests_arr, g_subj_tests_size, g_subj_answers);
+		run_test_set("TESTS FROM TRACE", MOUL_TEST_COUNT, g_moul_tests_arr, g_moul_tests_size, g_moul_answers);
 	}
 	else
 	{
-		int	*arr = malloc(sizeof(int) * (argc - 1));
-		for (int i = 1; i < argc; ++i)
-			arr[i - 1] = atoi(argv[i]);
-		print_array("histogram", arr, argc - 1);
-		printf("return = %d\n", volume_histogram(arr, argc - 1));
-		print_diagram(arr, argc - 1);
+		argc -= (flag) ? 2 : 1;
+		argv += (flag) ? 2 : 1;
+
+		int	*arr = malloc(sizeof(int) * argc);
+		for (int i = 0; i < argc; ++i)
+			arr[i] = atoi(argv[i]);
+		print_array("histogram", arr, argc);
+		printf("your return = %d\n", volume_histogram(arr, argc));
+		if (flag == 1)
+			print_diagram(arr, argc);
 	}
 }

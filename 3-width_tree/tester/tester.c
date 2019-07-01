@@ -37,21 +37,25 @@ static int g_subj_answers[] = { 6, 7, 2, 4, 1 };
 void	run_test(struct s_node *tree, int answer)
 {
 	int	ret = width_tree(tree);
-	if (ret == answer)
-		printf("\e[3;32mCorrect\e[0m\n");
-	else
-		printf("\e[3;31mIncorrect\e[0m\n");
-	printf("should return = %d\n", answer);
+	printf((ret == answer) ? "\e[3;32mCorrect\e[0m\n" : "\e[3;31mIncorrect\e[0m\n");
 	printf("  your return = %d\n", ret);
+	if (ret != answer)
+		printf("should return = %d\n", answer);
+}
+
+void	run_test_set(char *str, int count, struct s_node **tests, int* answers)
+{
+	printf("\e[100m%s\e[0m\n", str);
+	for (int i = 0; i < count; ++i)
+	{
+		printf("\e[1mTest %d:\e[0m ", i + 1);
+		run_test(tests[i], answers[i]);
+		printf("\n");
+	}
 }
 
 int main(void)
 {
-	printf("TESTS FROM SUBJECT:\n");
-	for (int i = 0; i < SUBJ_TEST_COUNT; ++i)
-	{
-		printf("\nExample %d: ", i + 1);
-		run_test(g_subj_tests[i], g_subj_answers[i]);
-	}
+	run_test_set("TESTS FROM SUBJECT", SUBJ_TEST_COUNT, g_subj_tests, g_subj_answers);
 	return (0);
 }

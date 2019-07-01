@@ -44,43 +44,38 @@ static char*	g_moul_answers[] = {
 	"A = 9, B = 9, C = 9\n"
 };
 
-void	run_tests(int count, int *tests, char* answers[])
+void	run_test(int test, char* answer)
 {
+	printf("equation(%d);\n", test);
+	printf("your output:\n");
+	equation(test);
+	printf("correct output:\n");
+	printf("%s", answer);
+}
+
+void	run_test_set(char *str, int count, int *tests, char* answers[])
+{
+	printf("\e[100m%s\e[0m\n", str);
 	for (int i = 0; i < count; ++i)
 	{
-		printf("Test %d:\n", i + 1);
-		printf("equation(%d);\n", tests[i]);
-		printf("correct output:\n");
-		printf("%s", answers[i]);
-		printf("your output:\n");
-		equation(tests[i]);
-		if (i + 1 < count)
-			printf("\n");
+		printf("\e[1mTest %d:\e[0m\n", i + 1);
+		run_test(tests[i], answers[i]);
+		printf("\n");
 	}
 }
 
 int		main(int argc, char **argv)
 {
-	int	arg;
-
 	if (argc < 2)
 	{
-		printf("TESTS FROM SUBJECT:\n");
-		run_tests(SUBJ_TEST_COUNT, g_subj_tests, g_subj_answers);
-		printf("\nTESTS FROM TRACE:\n");
-		run_tests(MOUL_TEST_COUNT, g_moul_tests, g_moul_answers);
+		run_test_set("TESTS FROM SUBJECT", SUBJ_TEST_COUNT, g_subj_tests, g_subj_answers);
+		run_test_set("TESTS FROM TRACE", MOUL_TEST_COUNT, g_moul_tests, g_moul_answers);
 	}
 	else
 	{
-		for (int i = 1; i < argc; ++i)
-		{
-			arg = atoi(argv[i]);
-			printf("Test %d:\n", i);
-			printf("equation(%d);\n", arg);
-			printf("your output:\n");
-			equation(arg);
-			if (i + 1 < argc)
-				printf("\n");
-		}
+		int arg = atoi(argv[1]);
+		printf("equation(%d);\n", arg);
+		printf("your output:\n");
+		equation(arg);
 	}
 }

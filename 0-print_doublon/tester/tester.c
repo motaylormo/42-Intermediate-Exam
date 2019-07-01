@@ -58,22 +58,29 @@ void	print_array(int *arr, int count)
 	printf(" }, %d", count);
 }
 
-void	run_tests(int count, int tests_arr[][2][MAX_ARR_SIZE], int tests_size[][2], char* answers[])
+void	run_test(int test_arr[2][MAX_ARR_SIZE], int test_size[2], char* answer)
 {
-	for (int i = 0; i < count; ++i)
-	{
-		printf("Test %d:\n", i + 1);
 		printf("print_doublon(");
-		print_array(tests_arr[i][0], tests_size[i][0]);
+		print_array(test_arr[0], test_size[0]);
 		printf(",\n              ");
-		print_array(tests_arr[i][1], tests_size[i][1]);
+		print_array(test_arr[1], test_size[1]);
 		printf(");\n");
 
-		printf("correct output:\n");
-		printf("%s", answers[i]);
 		printf("your output:\n");
-		print_doublon(tests_arr[i][0], tests_size[i][0],
-					  tests_arr[i][1], tests_size[i][1]);
+		print_doublon(test_arr[0], test_size[0],
+					  test_arr[1], test_size[1]);
+		printf("correct output:\n");
+		printf("%s", answer);
+}
+
+
+void	run_test_set(char *str, int count, int tests_arr[][2][MAX_ARR_SIZE], int tests_size[][2], char* answers[])
+{
+	printf("\e[100m%s\e[0m\n", str);
+	for (int i = 0; i < count; ++i)
+	{
+		printf("\e[1mTest %d:\e[0m\n", i + 1);
+		run_test(tests_arr[i], tests_size[i], answers[i]);
 		if (i + 1 < count)
 			printf("\n");
 	}
@@ -81,6 +88,6 @@ void	run_tests(int count, int tests_arr[][2][MAX_ARR_SIZE], int tests_size[][2],
 
 int		main(void)
 {
-	printf("TESTS FROM SUBJECT:\n");
-	run_tests(SUBJ_TEST_COUNT, g_subj_tests_arr, g_subj_tests_size, g_subj_answers);
+	run_test_set("TESTS FROM SUBJECT", SUBJ_TEST_COUNT,
+						g_subj_tests_arr, g_subj_tests_size, g_subj_answers);
 }

@@ -21,6 +21,7 @@ int		find_pivot(int *arr, int n);
 **	Given args, it runs those.
 */
 #define	MAX_ARR_SIZE 10
+static int flag;
 
 #define SUBJ_TEST_COUNT 5
 static int	g_subj_tests_arr[][MAX_ARR_SIZE] = {
@@ -37,9 +38,12 @@ static int	g_subj_answers[] = {
 	3, 2, 1, -1, -1
 };
 
-void	print_array(char *name, int *arr, int size)
+int		parse_flags(int argc, char **argv);
+void	print_diagram(int *arr, int size, int answer);
+
+void	print_array(char *arr_name, int *arr, char *size_name, int size)
 {
-	printf("%s[] = {", name);
+	printf("\t%s[] = {", arr_name);
 	for (int i = 0; i < size; ++i)
 	{
 		printf("%d", arr[i]);
@@ -47,73 +51,28 @@ void	print_array(char *name, int *arr, int size)
 			printf(", ");
 	}
 	printf("};\n");
+	printf("\t%s = %d;\n", size_name, size);
 }
 
-void	print_diagram(int *arr, int size, int answer)
+void	run_test(int test_arr[MAX_ARR_SIZE], int test_size, int answer)
 {
-	if (answer == -1)
-		return ;
-	int	left_sum = 0;
-	int	right_sum = 0;
-	int	left_width = 0;
-	int	right_width = 0;
-	int	n_width;
-	int	a_width;
-
-	printf("[ ");
-	for (int i = 0; i < size; ++i)
-	{
-		if (i == answer)
-			a_width = printf("(%d)", arr[i]);
-		else
-		{
-			n_width = printf("%d", arr[i]);
-			if (i < answer)
-			{
-				left_sum += arr[i];
-				left_width += n_width;
-			}
-			if (i > answer)
-			{
-				right_sum += arr[i];
-				right_width += n_width;
-			}
-		}
-		if (i + 1 < size)
-		{
-			printf(", ");
-			if (i + 1 < answer)
-				left_width += 2;
-			if (i > answer)
-				right_width += 2;
-		}
-	}
-	printf(" ]\n");
-
-	printf("  ");
-	for (int i = 0; i < left_width; ++i)
-		printf("-");
-	printf("  %*c^   ", a_width - 2, ' ');
-	for (int i = 0; i < right_width; ++i)
-		printf("-");
-	printf("\n");
-
-	n_width = left_width + right_width + a_width + 4;
-	n_width -= printf(" = %d", left_sum);
-	printf("%*c= %d\n", n_width, ' ', right_sum);
+	int ret = find_pivot(test_arr, test_size);
+	printf((ret == answer) ? "\e[3;32mCorrect\e[0m\n" : "\e[3;31mIncorrect\e[0m\n");
+	print_array("arr", test_arr, "n", test_size);
+	printf("  your return = %d\n", ret);
+	if (ret != answer)
+		printf("should return = %d\n", answer);
+	if (flag == 1 && test_size > 0)
+		print_diagram(test_arr, test_size, answer);
 }
 
-void	run_tests(int count, int tests_arr[][MAX_ARR_SIZE], int tests_size[], int answers[])
+void	run_test_set(char *str, int count, int tests_arr[][MAX_ARR_SIZE], int tests_size[], int answers[])
 {
+	printf("\e[100m%s\e[0m\n", str);
 	for (int i = 0; i < count; ++i)
 	{
-		printf("Test %d:\n", i + 1);
-		print_array("arr", tests_arr[i], tests_size[i]);
-		printf("n = %d;\n", tests_size[i]);
-		printf("find_pivot(arr, n);\n");
-		print_diagram(tests_arr[i], tests_size[i], answers[i]);
-		printf("should return = %d\n", answers[i]);
-		printf("  your return = %d\n", find_pivot(tests_arr[i], tests_size[i]));
+		printf("\e[1mTest %d:\e[0m ", i + 1);
+		run_test(tests_arr[i], tests_size[i], answers[i]);
 		if (i + 1 < count)
 			printf("\n");
 	}
@@ -121,22 +80,24 @@ void	run_tests(int count, int tests_arr[][MAX_ARR_SIZE], int tests_size[], int a
 
 int	main(int argc, char **argv)
 {
-	if (argc < 2)
+	flag = parse_flags(argc, argv);
+	if (argc < 2 || (argc < 3 && flag))
 	{
-		printf("TESTS FROM SUBJECT:\n");
-		run_tests(SUBJ_TEST_COUNT, g_subj_tests_arr, g_subj_tests_size, g_subj_answers);
+		run_test_set("TESTS FROM SUBJECT", SUBJ_TEST_COUNT,
+					g_subj_tests_arr, g_subj_tests_size, g_subj_answers);
 	}
 	else
 	{
-		int	*arr = malloc(sizeof(int) * (argc - 1));
-		for (int i = 1; i < argc; ++i)
-			arr[i - 1] = atoi(argv[i]);
-		print_array("arr", arr, argc - 1);
-		printf("n = %d;\n", argc - 1);
-		int ret = find_pivot(arr, argc - 1);
-		if (ret != -1)
-			print_diagram(arr, argc - 1, ret);
-		printf("find_pivot(arr, n);\n");
+		argc -= (flag) ? 2 : 1;
+		argv += (flag) ? 2 : 1;
+
+		int	*arr = malloc(sizeof(int) * argc);
+		for (int i = 0; i < argc; ++i)
+			arr[i] = atoi(argv[i]);
+		int ret = find_pivot(arr, argc);
+		print_array("arr", arr, "n", argc);
 		printf("your return = %d\n", ret);
-	}
+		if (flag == 1)
+			print_diagram(arr, argc, ret);
+	}	
 }

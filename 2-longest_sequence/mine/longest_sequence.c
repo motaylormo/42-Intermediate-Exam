@@ -24,17 +24,20 @@ struct s_node
 
 static void	send_snake_down(struct s_node *node, int *max, int seq)
 {
-	if (seq > *max)
-		*max = seq;
-	if (node->left)
+	if (node)
 	{
-		send_snake_down(node->left, max,
-				(CONSEC(node->value, node->left->value)) ? seq + 1 : 1);
-	}
-	if (node->right)
-	{
-		send_snake_down(node->right, max,
-				(CONSEC(node->value, node->right->value)) ? seq + 1 : 1);
+		if (seq > *max)
+			*max = seq;
+		if (node->left)
+		{
+			send_snake_down(node->left, max,
+					(CONSEC(node->value, node->left->value)) ? seq + 1 : 1);
+		}
+		if (node->right)
+		{
+			send_snake_down(node->right, max,
+					(CONSEC(node->value, node->right->value)) ? seq + 1 : 1);
+		}
 	}
 }
 

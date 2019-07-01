@@ -36,10 +36,11 @@ static char**	make_area(char** zone, t_point size)
 	return new;
 }
 
-void	print_map(char **area, t_point size, t_point begin)
+void	print_map(char *pre, char **area, t_point size, t_point begin)
 {
 	for (int i = 0; i < size.y; ++i)
 	{
+		printf("%s", pre);
 		for (int j = 0; j < size.x; ++j)
 		{
 			printf(" ");
@@ -61,28 +62,28 @@ int		matrix_equal(char **a, char **b, t_point size)
 	}
 	return (1);
 }
+
 void	run_test(char **area, t_point size, t_point begin, char **answer)
 {
-	print_map(area, size, begin);
-	flood_fill(area, size, begin);
-	if (matrix_equal(area, answer, size))
-	{
-		printf("\e[1;32m~Correct~\e[0m\n");
-	}
-	else
-	{
-		printf("\e[1;31m~Incorrect~\e[0m\n");
+	char **test = make_area(area, size);
 
-		printf("should result = \n");
-		print_map(answer, size, begin);
-		printf("your result = \n");
+	flood_fill(area, size, begin);
+	int ret = matrix_equal(area, answer, size);
+	printf((ret == 1) ? "\e[3;32mCorrect\e[0m\n" : "\e[3;31mIncorrect\e[0m\n");
+	print_map("\t", test, size, begin);
+	printf("your result:\n");
+	print_map(" ", area, size, begin);
+	if (!ret)
+	{
+		printf("should result:\n");
+		print_map(" ", answer, size, begin);
 	}
-	print_map(area, size, begin);
 }
 
 void	subject_tests(void)
 {
-	printf("Example 1:\n");
+	printf("\e[100mTESTS FROM SUBJECT\e[0m\n");
+	printf("\e[1mTest 1:\e[0m ");
 	t_point begin = {7, 4};
 	t_point size = {8, 5};
 	char *zone[] = {

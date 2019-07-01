@@ -11,6 +11,9 @@
 /* ************************************************************************** */
 
 #include <stdio.h>//	printf()
+#include <string.h>//	strcmp() & strlen()
+
+# define MAX_FOR_PRINTOUT 500
 
 char	*longest_subarray(char *arr);
 
@@ -51,16 +54,27 @@ static char*	g_moul_answers[] = {
 	"79135790246802"
 };
 
-void	run_tests(int count, char *tests[], char* answers[])
+void	run_test(char *test, char* answer)
 {
+	char *ret = longest_subarray(test);
+	int	status = strcmp(ret, answer);
+	printf((status == 0) ? "\e[3;32mCorrect\e[0m\n" : "\e[3;31mIncorrect\e[0m\n");
+	if (strlen(test) < MAX_FOR_PRINTOUT)
+		printf("longest_subarray(\"%s\");\n", test);
+	printf("  your return = \"%s\"\n", ret);
+	if (status != 0)
+		printf("should return = \"%s\"\n", answer);
+}
+
+
+void	run_test_set(char *str, int count, char *tests[], char* answers[])
+{
+	printf("\e[100m%s\e[0m\n", str);
 	for (int i = 0; i < count; ++i)
 	{
-		printf("Test %d:\n", i + 1);
-		printf("longest_subarray(\"%s\");\n", tests[i]);
-		printf("should return = \"%s\"\n", answers[i]);
-		printf("  your return = \"%s\"\n", longest_subarray(tests[i]));
-		if (i + 1 < count)
-			printf("\n");
+		printf("\e[1mTest %d:\e[0m ", i + 1);
+		run_test(tests[i], answers[i]);
+		printf("\n");
 	}
 }
 
@@ -68,20 +82,12 @@ int		main(int argc, char **argv)
 {
 	if (argc < 2)
 	{
-		printf("TESTS FROM SUBJECT:\n");
-		run_tests(SUBJ_TEST_COUNT, g_subj_tests, g_subj_answers);
-		printf("\nTESTS FROM TRACE:\n");
-		run_tests(MOUL_TEST_COUNT, g_moul_tests, g_moul_answers);
+		run_test_set("TESTS FROM SUBJECT", SUBJ_TEST_COUNT, g_subj_tests, g_subj_answers);
+		run_test_set("TESTS FROM TRACE", MOUL_TEST_COUNT, g_moul_tests, g_moul_answers);
 	}
 	else
 	{
-		for (int i = 1; i < argc; ++i)
-		{
-			printf("Test %d:\n", i);
-			printf("longest_subarray(\"%s\");\n", argv[i]);
-			printf("your return = \"%s\"\n", longest_subarray(argv[i]));
-			if (i + 1 < argc)
-				printf("\n");
-		}
+		printf("longest_subarray(\"%s\");\n", argv[1]);
+		printf("your return = \"%s\"\n", longest_subarray(argv[1]));
 	}
 }
