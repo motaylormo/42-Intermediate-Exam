@@ -35,11 +35,12 @@ static int	get_block_vol(int *arr, int levee1, int levee2)
 	int	vol = SMALLER(arr[levee1], arr[levee2])
 				* (levee2 - levee1 - 1);
 
+//displaced water
 	for (int i = levee1 + 1; i < levee2; i++)
 	{
 		vol -= arr[i];
 	}
-	return ((vol < 0) ? 0 : vol);
+	return (vol);
 }
 
 int		volume_histogram(int *histogram, int size)
