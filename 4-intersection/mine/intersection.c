@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_of_2.c                                       :+:      :+:    :+:   */
+/*   intersection.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 09:03:33 by exam              #+#    #+#             */
-/*   Updated: 2019/07/02 09:03:35 by exam             ###   ########.fr       */
+/*   Created: 2019/07/02 11:33:15 by exam              #+#    #+#             */
+/*   Updated: 2019/07/02 11:33:16 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	nums_2s(int n)
-{
-	if (n < 10)
-		return ((n == 2) ? 1 : 0);
-	else
-		return (nums_2s(n / 10) + nums_2s(n % 10));
-		
-}
+struct s_node {
+	void			*content;
+	struct s_node	*next;
+};
 
-int		count_of_2(int n)
+void	*intersection(struct s_node *lst1, struct s_node *lst2)
 {
-	int sum = 0;
-	for (int i = 0; i <= n; ++i)
+	for (struct s_node *k = lst1; k; (k = k->next))
 	{
-		sum += nums_2s(i);
+		for (struct s_node *j = lst2; j; (j = j->next))
+		{
+			if (k == j)
+				return (k);
+		}
 	}
-	return (sum);
+	return (0);
 }

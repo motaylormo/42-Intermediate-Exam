@@ -1,30 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   count_of_2.c                                       :+:      :+:    :+:   */
+/*   ord_alphlong.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 09:03:33 by exam              #+#    #+#             */
-/*   Updated: 2019/07/02 09:03:35 by exam             ###   ########.fr       */
+/*   Created: 2019/07/02 09:25:58 by exam              #+#    #+#             */
+/*   Updated: 2019/07/02 09:25:59 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	nums_2s(int n)
-{
-	if (n < 10)
-		return ((n == 2) ? 1 : 0);
-	else
-		return (nums_2s(n / 10) + nums_2s(n % 10));
-		
-}
+#include <unistd.h>//write
+#include <stdlib.h>//malloc
 
-int		count_of_2(int n)
-{
-	int sum = 0;
-	for (int i = 0; i <= n; ++i)
-	{
-		sum += nums_2s(i);
-	}
-	return (sum);
-}
+int		ft_strlen(char *str);
+int		ft_putstr(char *str);
+char	**ft_strsplit(char *str);

@@ -54,7 +54,7 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | Question | Solution | Tester main | Trace test<br>accessibility
 | -------- | -------- | ----------- | ------------------------
 | [clone_list](./4-clone_list)             | [:white_check_mark:](./4-clone_list/mine)       | :no_entry_sign:                                   | :crystal_ball:
-| [intersection](./4-intersection)         | :no_entry_sign:                                 | :no_entry_sign:
+| [intersection](./4-intersection)         | [:white_check_mark:](./4-intersection/mine)     | :no_entry_sign:                                   | :crystal_ball:
 | [longest_subarray](./4-longest_subarray) | [:white_check_mark:](./4-longest_subarray/mine) | [:white_check_mark:](./4-longest_subarray/tester) | :open_file_folder:
 | [range_comb](./4-range_comb)             | :no_entry_sign:                                 | :no_entry_sign:
 | [volume_histogram](./4-volume_histogram) | [:white_check_mark:](./4-volume_histogram/mine) | [:white_check_mark:](./4-volume_histogram/tester) | :open_file_folder:

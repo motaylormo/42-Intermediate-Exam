@@ -3,60 +3,51 @@
 /*                                                        :::      ::::::::   */
 /*   count_alpha.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/16 15:24:31 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/04/16 15:24:33 by mtaylor          ###   ########.fr       */
+/*   Created: 2019/07/02 09:10:07 by exam              #+#    #+#             */
+/*   Updated: 2019/07/02 09:10:08 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#define IS_ALPHA(c)	((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-#define USED -1
 
-static int	to_lower(char c)
-{
-	if (c >= 'A' && c <= 'Z')
-		return ((c - 'A') + 'a');
-	else
-		return (c);
-}
+#define ALPHA(c) ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+#define LOWERCASE(c) ((c >= 'A' && c <= 'Z') ? c - 'A' + 'a' : c)
 
-static void	count_ascii(char *s, int *hashtable)
+void	fill_hashtable(char *str, int *hash_table)
 {
-	while (*s)
+	for (int i = 0; str[i]; ++i)
 	{
-		hashtable[to_lower(*s)]++;
-		s++;
+		if (ALPHA(str[i]))
+			hash_table[(int)LOWERCASE(str[i])]++;
 	}
 }
 
-void	count_alpha(char *s)
+void	count_alpha(char *str)
 {
-	int	hashtable[127] = {0};
-	int	first = 0;
+	int	hash_table[127] = {0};
+	int	first = 1;
 
-	count_ascii(s, (int*)&hashtable);
-
-	while (*s)
+	fill_hashtable(str, hash_table);
+	for (int i = 0; str[i]; ++i)
 	{
-		*s = to_lower(*s);
-		if (IS_ALPHA(*s) && hashtable[(int)*s] != USED)
+		if (ALPHA(str[i]) && hash_table[LOWERCASE(str[i])] > 0)
 		{
-			if (first != 0)
+			if (first == 0)
 				printf(", ");
-			first = 1;
-			printf("%d%c", hashtable[(int)*s], *s);
-			hashtable[(int)*s] = USED;
+			else
+				first = 0;
+			printf("%d%c", hash_table[LOWERCASE(str[i])], LOWERCASE(str[i]));
+			hash_table[LOWERCASE(str[i])] = 0;
 		}
-		s++;
 	}
 }
 
-int		main(int ac, char **av)
+int	main(int argc, char **argv)
 {
-	if (ac == 2)
-		count_alpha(av[1]);
+	if (argc == 2)
+		count_alpha(argv[1]);
 	printf("\n");
 	return (0);
 }
