@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/15 13:09:40 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/05/15 13:09:41 by mtaylor          ###   ########.fr       */
+/*   Created: 2019/07/02 14:27:00 by mtaylor           #+#    #+#             */
+/*   Updated: 2019/07/02 14:27:01 by mtaylor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <stdio.h>
 
@@ -60,14 +61,15 @@ static void	rightmost_nodes(struct s_node *n)
 */
 void	perimeter(struct s_node *root)
 {
-	if (!root)
-		return;
-	printf("%d", root->value);
-	if (!LEAF(root))
+	if (root)
 	{
-		leftmost_nodes(root->left);
-		leaf_nodes(root);
-		rightmost_nodes(root->right);
+		printf("%d", root->value);
+		if (!LEAF(root))
+		{
+			leftmost_nodes(root->left);
+			leaf_nodes(root);
+			rightmost_nodes(root->right);
+		}
+		printf("\n");
 	}
-	printf("\n");
 }
