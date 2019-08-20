@@ -12,7 +12,6 @@
 
 #include "infin_add.h"
 #define LARGER(a, b)	((a > b) ? a : b)
-//int	traysize;
 
 int		signs_match(int *tray, int traysize)
 {
