@@ -66,3 +66,32 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 | [g_diam](./5-g_diam)             | :no_entry_sign:                             | :no_entry_sign:
 | [infin_add](./5-infin_add)       | [:white_check_mark:](./5-infin_add/mine)    | [:eight_spoked_asterisk:](./5-infin_add/tester)    | :open_file_folder:
 | [infin_mult](./5-infin_mult)     | [:white_check_mark:](./5-infin_mult/mine)   | [:eight_spoked_asterisk:](./5-infin_mult/tester)   | :open_file_folder:
+
+***
+# Concepts:
+### Hash table
+* is_anagram
+* count_alpha
+
+### Implementing data structure
+* queue
+* stack
+
+## Tree
+### N-ary tree
+* height_tree
+
+### binary search tree (BST)
+* convert_bst
+
+### Binary tree
+* reverse_tree
+* longest_sequence
+* width_tree
+* perimeter
+* can_split
+
+## Linked list
+* is_looping
+* clone_list
+* intersection
