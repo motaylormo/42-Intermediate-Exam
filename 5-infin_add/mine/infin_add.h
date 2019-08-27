@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ord_alphlong.h                                     :+:      :+:    :+:   */
+/*   infin_add.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 10:04:27 by exam              #+#    #+#             */
-/*   Updated: 2019/06/11 10:27:54 by exam             ###   ########.fr       */
+/*   Created: 2019/08/27 09:47:58 by exam              #+#    #+#             */
+/*   Updated: 2019/08/27 09:50:56 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#include <stdlib.h>//malloc
+#include <unistd.h>//write
 
-int		ft_strlen(char *str);
-void	ft_putstr(char *str);
-int		ft_tolower(char c);
-char	**ft_strsplit(char *str);
+int	ft_putchar(char c);
+int	ft_strlen(char *str);

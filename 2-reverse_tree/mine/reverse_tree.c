@@ -3,35 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_tree.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/12 13:47:59 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/05/12 13:48:00 by mtaylor          ###   ########.fr       */
+/*   Created: 2019/08/27 09:24:10 by exam              #+#    #+#             */
+/*   Updated: 2019/08/27 09:29:05 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 struct s_node {
-	int				value;
-	struct s_node	*right;
-	struct s_node	*left;
+	int           value;
+	struct s_node *right;
+	struct s_node *left;
 };
 
-static void	rt_recurse(struct s_node *n)
+void	reverse_tree(struct s_node *n)
 {
-	struct s_node	*tmp;
+	struct s_node *tmp;
 
-	if (n && (n->left || n->right))
+	if (n)
 	{
 		tmp = n->left;
 		n->left = n->right;
 		n->right = tmp;
-		rt_recurse(n->left);
-		rt_recurse(n->right);
+		reverse_tree(n->left);
+		reverse_tree(n->right);
 	}
-}
-
-void	reverse_tree(struct s_node *root)
-{
-	if (root)
-		rt_recurse(root);
 }

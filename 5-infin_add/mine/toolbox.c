@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   infin_add.h                                        :+:      :+:    :+:   */
+/*   toolbox.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/02 11:41:11 by exam              #+#    #+#             */
-/*   Updated: 2019/07/02 11:41:12 by exam             ###   ########.fr       */
+/*   Created: 2019/08/27 09:48:11 by exam              #+#    #+#             */
+/*   Updated: 2019/08/27 10:00:41 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>//write
-#include <stdlib.h>//malloc
+#include "infin_add.h"
 
-int		ft_strlen(char *str);
-void	ft_putchar(char c);
-int		ft_strequ(char *a, char *b);
+int	ft_putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+int	ft_strlen(char *str)
+{
+	int i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
