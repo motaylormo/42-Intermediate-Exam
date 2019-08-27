@@ -1,0 +1,61 @@
+= count_island =================================================================
+$> gcc -Wextra -Wall -Werror toolbox.c main.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./wh66piu9uvv2pv2jnygysa1a test1.prm
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./xqhwyhlshgwuqhmjvd61go2o test2.prm
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./vt5qbdbtttswp09ixf8xz2lf test3.prm
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./ouxn4uat77hugi0jwvuovei9 test4.prm
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./fuq5g570btip4ujzenbw1umb test5.prm
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./kvn2b68vy5702q9e8xuiphe0 test6.prm
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./f3663u4y5i9lnca9kjb7p29r test7.prm
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./58md9oz11eu0eka8zym4zpm0 test8.prm
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./dhedl1hjlben04sx11h1po0n test9.prm
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./3lukg16uanix4mo2r4cemdmq test10.prm
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+= Test 11 ==================================================
+$> ./3oia4k8tdwolqjbuzb3az07m test11.prm
+$> diff -U 3 user_output_test11 test11.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
