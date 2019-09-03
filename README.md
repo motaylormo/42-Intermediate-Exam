@@ -16,35 +16,35 @@ $> diff -U 3 user_output_test1 test1.output | cat -e
 
 Level | Question | Trace | Solution | Test main
 ----: | -------- | ----- | -------- | ---------
-0 | [`count_of_2`](./level0/count_of_2)          | :open_file_folder: | :white_check_mark: | :white_check_mark:
-0 | [`equation`](./level0/equation)              | :open_file_folder: | :white_check_mark: | :white_check_mark:
-0 | [`find_pivot`](./level0/find_pivot)          | :lock:             | :white_check_mark: | :white_check_mark:
-0 | [`is_anagram`](./level0/is_anagram)          | :lock:             | :white_check_mark: | :white_check_mark:
-0 | [`print_doublon`](./level0/print_doublon)    | :lock:             | :white_check_mark: | :white_check_mark:
-1 | `count_alpha`      | :open_file_folder: | :white_check_mark: | :clipboard:
-1 | `flood_fill`       | :lock:             | :white_check_mark: | :white_check_mark:
-1 | `height_tree`      | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
-1 | `queue`            | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
-1 | `stack`            | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
-2 | `is_looping`       | :crystal_ball:     | :white_check_mark: | :white_check_mark:
-2 | `longest_sequence` | :crystal_ball:     | :white_check_mark: | :white_check_mark:
-2 | `ord_alphlong`     | :open_file_folder: | :white_check_mark: | :clipboard:
-2 | `reverse_tree`     | :crystal_ball:     | :white_check_mark: | :white_check_mark:
-2 | `str_maxlenoc`     | :open_file_folder: | :white_check_mark: | :clipboard:
-3 | `can_split`        | :crystal_ball:     | :white_check_mark: | :white_check_mark:
-3 | `convert_bst`      | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
-3 | `gold_gain`        | :lock:             | :white_check_mark: | :white_check_mark:
-3 | `perimeter`        | :crystal_ball:     | :white_check_mark: | :white_check_mark:
-3 | `width_tree`       | :crystal_ball:     | :white_check_mark: | :white_check_mark:
-4 | `clone_list`       | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
-4 | `intersection`     | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
-4 | `longest_subarray` | :open_file_folder: | :white_check_mark: | :white_check_mark:
-4 | `range_comb`       |                    | :no_entry_sign:    | :no_entry_sign:
-4 | `volume_histogram` | :open_file_folder: | :white_check_mark: | :white_check_mark:
-5 | `count_island`     | :lock:             | :white_check_mark: | :clipboard:
-5 | `g_diam`           |                    | :no_entry_sign:    | :no_entry_sign:
-5 | `infin_add`        | :open_file_folder: | :white_check_mark: | :clipboard:
-5 | `infin_mult`       | :open_file_folder: | :white_check_mark: | :clipboard:
+0 | [`count_of_2`](./level0/count_of_2)             | :open_file_folder: | :white_check_mark: | :white_check_mark:
+0 | [`equation`](./level0/equation)                 | :open_file_folder: | :white_check_mark: | :white_check_mark:
+0 | [`find_pivot`](./level0/find_pivot)             | :lock:             | :white_check_mark: | :white_check_mark:
+0 | [`is_anagram`](./level0/is_anagram)             | :lock:             | :white_check_mark: | :white_check_mark:
+0 | [`print_doublon`](./level0/print_doublon)       | :lock:             | :white_check_mark: | :white_check_mark:
+1 | [`count_alpha`](./level1/count_alpha)           | :open_file_folder: | :white_check_mark: | :clipboard:
+1 | [`flood_fill`](./level1/flood_fill)             | :lock:             | :white_check_mark: | :white_check_mark:
+1 | [`height_tree`](./level1/height_tree)           | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
+1 | [`queue`](./level1/queue)                       | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
+1 | [`stack`](./level1/stack)                       | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
+2 | [`is_looping`](./level2/is_looping)             | :crystal_ball:     | :white_check_mark: | :white_check_mark:
+2 | [`longest_sequence`](./level2/longest_sequence) | :crystal_ball:     | :white_check_mark: | :white_check_mark:
+2 | [`ord_alphlong`](./level2/ord_alphlong)         | :open_file_folder: | :white_check_mark: | :clipboard:
+2 | [`reverse_tree`](./level2/reverse_tree)         | :crystal_ball:     | :white_check_mark: | :white_check_mark:
+2 | [`str_maxlenoc`](./level2/str_maxlenoc)         | :open_file_folder: | :white_check_mark: | :clipboard:
+3 | [`can_split`](./level3/can_split)               | :crystal_ball:     | :white_check_mark: | :white_check_mark:
+3 | [`convert_bst`](./level3/convert_bst)           | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
+3 | [`gold_gain`](./level3/gold_gain)               | :lock:             | :white_check_mark: | :white_check_mark:
+3 | [`perimeter`](./level3/perimeter)               | :crystal_ball:     | :white_check_mark: | :white_check_mark:
+3 | [`width_tree`](./level3/width_tree)             | :crystal_ball:     | :white_check_mark: | :white_check_mark:
+4 | [`clone_list`](./level4/clone_list)             | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
+4 | [`intersection`](./level4/intersection)         | :crystal_ball:     | :white_check_mark: | :no_entry_sign:
+4 | [`longest_subarray`](./level4/longest_subarray) | :open_file_folder: | :white_check_mark: | :white_check_mark:
+4 | [`range_comb`](./level4/range_comb)             |                    | :no_entry_sign:    | :no_entry_sign:
+4 | [`volume_histogram`](./level4/volume_histogram) | :open_file_folder: | :white_check_mark: | :white_check_mark:
+5 | [`count_island`](./level5/count_island)         | :lock:             | :white_check_mark: | :clipboard:
+5 | [`g_diam`](./level5/g_diam)                     |                    | :no_entry_sign:    | :no_entry_sign:
+5 | [`infin_add`](./level5/infin_add)               | :open_file_folder: | :white_check_mark: | :clipboard:
+5 | [`infin_mult`](./level5/infin_mult)             | :open_file_folder: | :white_check_mark: | :clipboard:
 
 ***
 # Concepts:
