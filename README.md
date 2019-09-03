@@ -39,7 +39,7 @@ level | question | program/<br>function | trace | solution | test<br>main
 4 | [`clone_list`](./level4/clone_list)            |:gear: | :crystal_ball:     | :white_check_mark: | :no_entry_sign:    |
 4 | [`intersection`](./level4/intersection)        |:gear: | :crystal_ball:     | :white_check_mark: | :no_entry_sign:    |
 4 | [`longest_subarray`](./level4/longest_subarray)|:gear: | :open_file_folder: | :white_check_mark: | :white_check_mark: |
-4 | [`range_comb`](./level4/range_comb)            |:gear: | :open_file_folder: | :no_entry_sign:    | :no_entry_sign:    |
+4 | [`range_comb`](./level4/range_comb)            |:gear: | :open_file_folder: | :no_entry_sign:    | :white_check_mark: |
 4 | [`volume_histogram`](./level4/volume_histogram)|:gear: | :open_file_folder: | :white_check_mark: | :white_check_mark: |
 5 | [`count_island`](./level5/count_island)        |:pager:| :lock:             | :white_check_mark: | :clipboard:        |
 5 | [`g_diam`](./level5/g_diam)                    |:pager:| :open_file_folder: | :no_entry_sign:    | :no_entry_sign:    |
