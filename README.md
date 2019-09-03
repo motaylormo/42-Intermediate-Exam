@@ -42,7 +42,7 @@ level | question | program/<br>function | trace | solution | test<br>main
 4 | [`range_comb`](./level4/range_comb)            |:gear: | :open_file_folder: | :no_entry_sign:    | :white_check_mark: |
 4 | [`volume_histogram`](./level4/volume_histogram)|:gear: | :open_file_folder: | :white_check_mark: | :white_check_mark: |
 5 | [`count_island`](./level5/count_island)        |:pager:| :lock:             | :white_check_mark: | :clipboard:        |
-5 | [`g_diam`](./level5/g_diam)                    |:pager:| :open_file_folder: | :no_entry_sign:    | :no_entry_sign:    |
+5 | [`g_diam`](./level5/g_diam)                    |:pager:| :open_file_folder: | :no_entry_sign:    | :clipboard:        |
 5 | [`infin_add`](./level5/infin_add)              |:pager:| :open_file_folder: | :white_check_mark: | :clipboard:        |
 5 | [`infin_mult`](./level5/infin_mult)            |:pager:| :open_file_folder: | :white_check_mark: | :clipboard:        |
 
