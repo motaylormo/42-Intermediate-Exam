@@ -60,8 +60,8 @@ level | question | program/<br>function | struct?
 1 | [`count_alpha`](./level1/count_alpha)          |:pager:| 
 1 | [`flood_fill`](./level1/flood_fill)            |:gear: | 
 1 | [`height_tree`](./level1/height_tree)          |:gear: | :deciduous_tree:
-1 | [`queue`](./level1/queue)                      |:gear: | 
-1 | [`stack`](./level1/stack)                      |:gear: | 
+1 | [`queue`](./level1/queue)                      |:gear: | :books:
+1 | [`stack`](./level1/stack)                      |:gear: | :books:
 2 | [`is_looping`](./level2/is_looping)            |:gear: | :link:
 2 | [`longest_sequence`](./level2/longest_sequence)|:gear: | :deciduous_tree:
 2 | [`ord_alphlong`](./level2/ord_alphlong)        |:pager:| 
