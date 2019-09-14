@@ -68,7 +68,7 @@ level | question | program/<br>function | struct?
 2 | [`reverse_tree`](./level2/reverse_tree)        |:gear: | :deciduous_tree:
 2 | [`str_maxlenoc`](./level2/str_maxlenoc)        |:pager:| 
 3 | [`can_split`](./level3/can_split)              |:gear: | :deciduous_tree:
-3 | [`convert_bst`](./level3/convert_bst)          |:gear: | :deciduous_tree:
+3 | [`convert_bst`](./level3/convert_bst)          |:gear: | :deciduous_tree: :link:
 3 | [`gold_gain`](./level3/gold_gain)              |:gear: | 
 3 | [`perimeter`](./level3/perimeter)              |:gear: | :deciduous_tree:
 3 | [`width_tree`](./level3/width_tree)            |:gear: | :deciduous_tree:
