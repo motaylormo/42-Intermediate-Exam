@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/10 12:22:18 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/05/10 12:22:19 by mtaylor          ###   ########.fr       */
+/*   Created: 2019/09/16 17:48:05 by mtaylor           #+#    #+#             */
+/*   Updated: 2019/09/16 17:48:10 by mtaylor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,95 +16,42 @@ struct s_node {
 	struct s_node	*left;
 };
 
-/*
-**	Remove a leaf from the bottom of a tree.
-*/
-static struct s_node	*remove_leaf(struct s_node *tree)
+static void	link_2_nodes(struct s_node *a, struct s_node *b)
 {
-	struct s_node	*n = tree;
-	struct s_node	*prev = 0;
-
-	if (!tree)
-		return (0);
-
-	while (n->left || n->right)
-	{
-		prev = n;
-		n = (n->left) ? n->left : n->right;
-	}
-	if (prev)
-	{
-		if (n == prev->left)
-			prev->left = 0;
-		if (n == prev->right)
-			prev->right = 0;
-	}
-	return (n);
+	a->left = b;
+	b->right = a;
 }
 
-/*
-**	insert a node between list_left and list_right
-*/
-static void	insert_node(struct s_node *list_left,
-						struct s_node *list_right, struct s_node *n)
+static void	convert_subtree(struct s_node *curr, struct s_node **prev)
 {
-	if (list_left)
-		list_left->right = n;
-	if (list_right)
-		list_right->left = n;
-	n->left = list_left;
-	n->right = list_right;
+	if (curr == 0)
+		return;
+
+	convert_subtree(curr->left, prev);
+	if (*prev)
+		link_2_nodes(curr, *prev);
+	*prev = curr;
+	convert_subtree(curr->right, prev);
 }
 
-static struct s_node	*add_to_list(struct s_node *list, struct s_node *n)
+static struct s_node	*link_ends(struct s_node *curr)
 {
-	struct s_node	*head = list;
-
-	if (!list)
-	{
-		list = n;
-		return (list);
-	}
-	else if (n->value <= list->value)
-	{
-		insert_node(list->left, list, n);
-		return (list->left);
-	}
-	else if (n->value > list->value)
-	{
-		head = list;
-		while (list->right && (n->value > list->right->value))
-			list = list->right;
-		insert_node(list, list->right, n);
-		return (head);
-	}
-	return (list);
-}
-
-static struct s_node	*link_list(struct s_node *head)
-{
-	struct s_node	*end;
-
-	end = head;
-	while (end->right)
-		end = end->right;
-
-	end->right = head;
-	head->left = end;
-	return (head);
+	struct s_node *leftmost = curr;
+	struct s_node *rightmost = curr;
+	while (leftmost->left)
+		leftmost = leftmost->left;
+	while (rightmost->right)
+		rightmost = rightmost->right;
+	link_2_nodes(leftmost, rightmost);
+	return (leftmost);
 }
 
 struct s_node	*convert_bst(struct s_node *bst)
 {
-	struct s_node	*list = 0;
-	struct s_node	*n = 0;
+	if (bst == 0)
+		return (0);
 
-	while (n != bst)//ends when the node (leftover from list time) is the root of the tree
-	{
-		n = remove_leaf(bst);
-		if (n == 0)
-			break;
-		list = add_to_list(list, n);
-	}
-	return (link_list(list));
+	struct s_node *prev = 0;
+	convert_subtree(bst, &prev);
+	return (link_ends(bst));
 }
