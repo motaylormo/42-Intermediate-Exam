@@ -27,7 +27,7 @@ level | question | program/<br>function  | trace | test<br>main |
 0 | [`find_pivot`](./level0/find_pivot)            |:gear: |:lock:            |:white_check_mark:|
 0 | [`is_anagram`](./level0/is_anagram)            |:gear: |:lock:            |:white_check_mark:|
 0 | [`print_doublon`](./level0/print_doublon)      |:gear: |:lock:            |:white_check_mark:|
-| > | 1 |
+1 |
 1 | [`count_alpha`](./level1/count_alpha)          |:pager:|:open_file_folder:|:clipboard:       |
 1 | [`flood_fill`](./level1/flood_fill)            |:gear: |:lock:            |:white_check_mark:|
 1 | [`height_tree`](./level1/height_tree)          |:gear: |:crystal_ball:    |:no_entry_sign:   |
