@@ -1,57 +1,51 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   convert_bst.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mtaylor <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 17:48:05 by mtaylor           #+#    #+#             */
-/*   Updated: 2019/09/16 17:48:10 by mtaylor          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 struct s_node {
-	int				value;
-	struct s_node	*right;
-	struct s_node	*left;
+	int           value;
+	struct s_node *right;
+	struct s_node *left;
 };
 
-static void	link_2_nodes(struct s_node *a, struct s_node *b)
+static struct s_node *rightmost(struct s_node *n)
 {
-	a->left = b;
-	b->right = a;
+	if (!n)
+		return (0);
+	while (n->right)
+		n = n->right;
+	return (n);
+}
+static struct s_node *leftmost(struct s_node *n)
+{
+	if (!n)
+		return (0);
+	while (n->left)
+		n = n->left;
+	return (n);
 }
 
-static void	convert_subtree(struct s_node *curr, struct s_node **prev)
+static void	link_up(struct s_node *lefthand, struct s_node *righthand)
 {
-	if (curr == 0)
-		return;
-
-	convert_subtree(curr->left, prev);
-	if (*prev)
-		link_2_nodes(curr, *prev);
-	*prev = curr;
-	convert_subtree(curr->right, prev);
+	if (lefthand)
+		lefthand->right = righthand;
+	if (righthand)
+		righthand->left = lefthand;
 }
 
-static struct s_node	*link_ends(struct s_node *curr)
+static struct s_node *	recur(struct s_node *n)
 {
-	struct s_node *leftmost = curr;
-	struct s_node *rightmost = curr;
-	while (leftmost->left)
-		leftmost = leftmost->left;
-	while (rightmost->right)
-		rightmost = rightmost->right;
-	link_2_nodes(leftmost, rightmost);
-	return (leftmost);
-}
-
-struct s_node	*convert_bst(struct s_node *bst)
-{
-	if (bst == 0)
+	if (!n)
 		return (0);
 
-	struct s_node *prev = 0;
-	convert_subtree(bst, &prev);
-	return (link_ends(bst));
+	link_up(rightmost(recur(n->left)), n);
+	link_up(n, leftmost(recur(n->right)));
+
+	return (n);
+}
+
+struct s_node	*convert_bst(struct s_node *bst_root)
+{
+	recur(bst_root);
+
+	struct s_node *list = leftmost(bst_root);
+	link_up(rightmost(list), list);
+
+	return (list);
 }
